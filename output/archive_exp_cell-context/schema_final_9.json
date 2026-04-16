@@ -1,0 +1,147 @@
+{
+  "fields": [
+    {
+      "name": "cell_function_engaged",
+      "description": "Which functional role of this cell type does the drug interact with",
+      "field_type": "controlled",
+      "controlled_vocabulary": "cell_function_engaged_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "cell_metabolic_context",
+      "description": "Which metabolic program of this cell type is relevant to the drug's action",
+      "field_type": "controlled",
+      "controlled_vocabulary": "cell_metabolic_context_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "cell_stress_response",
+      "description": "Which vulnerability or stress of this cell type does the drug engage or protect against",
+      "field_type": "controlled",
+      "controlled_vocabulary": "cell_stress_response_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "receptor_class_in_cell",
+      "description": "Which receptor or target class is dominant in this cell type's response to the drug",
+      "field_type": "controlled",
+      "controlled_vocabulary": "receptor_class_in_cell_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "drug_cell_interaction_mode",
+      "description": "How the drug physically or functionally interacts with this specific cell type",
+      "field_type": "controlled",
+      "controlled_vocabulary": "drug_cell_interaction_mode_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    }
+  ],
+  "controlled_vocabularies": {
+    "cell_function_engaged_vocab": [
+      "cell_survival",
+      "inflammation_regulation",
+      "signal_transduction",
+      "cell_proliferation",
+      "cell_signaling",
+      "immune_surveillance",
+      "detoxification",
+      "hormone_secretion",
+      "glycosylation_processing",
+      "contractility",
+      "muscle_growth",
+      "wound_healing",
+      "anti-apoptotic_activity",
+      "energy_metabolism",
+      "neuroprotection",
+      "neurite_outgrowth",
+      "anti-inflammatory_response",
+      "cell_differentiation",
+      "viral_replication_inhibition"
+    ],
+    "cell_metabolic_context_vocab": [
+      "energy_metabolism",
+      "antioxidant_activity",
+      "fatty_acid_oxidation",
+      "glycolysis",
+      "oxidative_phosphorylation",
+      "lipogenesis",
+      "ketogenesis",
+      "amino_acid_metabolism",
+      "lipid_metabolism",
+      "glucose_homeostasis",
+      "immune_cell_metabolism",
+      "neuron_specific_metabolism",
+      "calcium_signaling",
+      "iron_metabolism",
+      "mitochondrial_function",
+      "glycosylation_regulation",
+      "detoxification",
+      "limited_relevance"
+    ],
+    "cell_stress_response_vocab": [
+      "excitotoxicity",
+      "inflammation",
+      "oxidative_stress",
+      "apoptosis_due_to_energy_balance",
+      "cell_homeostasis",
+      "cell_resilience",
+      "neuron_stress",
+      "protection_against_liver_injury",
+      "cellular_stress",
+      "heart_failure_susceptibility",
+      "protection_against_myocardial_injury",
+      "membrane_integrity_maintenance"
+    ],
+    "receptor_class_in_cell_vocab": [
+      "nuclear_hormone",
+      "adrenergic",
+      "growth_factor",
+      "ion_channel_gated",
+      "transport_proteins",
+      "toll_like",
+      "selectins",
+      "integrins",
+      "matrix_metaloproteinases",
+      "androgen_receptors",
+      "estrogen_receptors",
+      "unknown_receptor",
+      "muscle_cell_receptors"
+    ],
+    "drug_cell_interaction_mode_vocab": [
+      "direct_target",
+      "indirect_modulation",
+      "modulation_of_signaling_pathways",
+      "bystander_effect",
+      "synergistic",
+      "antagonistic",
+      "transcriptional_regulation",
+      "immunomodulation",
+      "limited_documented_effects"
+    ]
+  },
+  "type_specific_fields": {
+    "ChemicalSubstance": [
+      "cell_function_engaged",
+      "cell_metabolic_context",
+      "cell_stress_response",
+      "receptor_class_in_cell",
+      "drug_cell_interaction_mode"
+    ]
+  },
+  "notes": "Experiment C: cell-type-characteristic drug context schema. Fields are designed to encode what is biologically distinctive about each cell type rather than generic drug properties. Each vocabulary term implicitly identifies a cell type (e.g. contractility=cardiomyocyte, excitotoxicity=neuron, detoxification=hepatocyte) without label leakage. Designed to produce cell-type clusters under behavior-only, no-name, mean-subtraction UMAP."
+}

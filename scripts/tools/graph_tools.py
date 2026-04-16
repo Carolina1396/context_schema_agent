@@ -10,6 +10,8 @@ import random
 from pathlib import Path
 from collections import Counter
 
+from tqdm import tqdm
+
 # ---------------------------------------------------------------------------
 # Data loading
 # ---------------------------------------------------------------------------
@@ -27,7 +29,7 @@ def _ensure_loaded() -> None:
         return
     with open(_NODES_PATH, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        for row in reader:
+        for row in tqdm(reader, desc="Loading nodes", unit=" nodes"):
             _nodes.append(row)
             _nodes_by_id[row["id"]] = row
             label = row.get("label", "unknown")

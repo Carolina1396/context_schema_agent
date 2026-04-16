@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from openai import OpenAI
+from tqdm import tqdm
 
 # ---------------------------------------------------------------------------
 # Output directories for batch artifacts
@@ -231,28 +232,35 @@ def submit_batch(
 
 def poll_batch(client: OpenAI, batch_id: str) -> dict:
     """Poll a batch until it reaches a terminal state. Returns the batch object as a dict."""
-    while True:
-        batch = client.batches.retrieve(batch_id)
-        status = batch.status
+    last_completed = 0
+    with tqdm(desc=f"Batch {batch_id[:12]}…", unit=" poll", dynamic_ncols=True) as pbar:
+        while True:
+            batch = client.batches.retrieve(batch_id)
+            status = batch.status
+            total = batch.request_counts.total if batch.request_counts else 0
+            completed = batch.request_counts.completed if batch.request_counts else 0
 
-        if status in ("completed", "failed", "expired", "cancelled"):
-            print(f"[batch] {batch_id} → {status}")
-            return {
-                "batch_id": batch_id,
-                "status": status,
-                "output_file_id": getattr(batch, "output_file_id", None),
-                "error_file_id": getattr(batch, "error_file_id", None),
-                "request_counts": {
-                    "total": batch.request_counts.total,
-                    "completed": batch.request_counts.completed,
-                    "failed": batch.request_counts.failed,
-                },
-            }
+            pbar.set_postfix_str(f"{completed}/{total} req | {status}")
+            pbar.update(1)
 
-        completed = batch.request_counts.completed if batch.request_counts else 0
-        total = batch.request_counts.total if batch.request_counts else "?"
-        print(f"[batch] {batch_id} → {status} ({completed}/{total} done), waiting {POLL_INTERVAL_SECONDS}s...")
-        time.sleep(POLL_INTERVAL_SECONDS)
+            if completed > last_completed:
+                tqdm.write(f"  [{batch_id[:12]}] {completed}/{total} requests completed")
+                last_completed = completed
+
+            if status in ("completed", "failed", "expired", "cancelled"):
+                return {
+                    "batch_id": batch_id,
+                    "status": status,
+                    "output_file_id": getattr(batch, "output_file_id", None),
+                    "error_file_id": getattr(batch, "error_file_id", None),
+                    "request_counts": {
+                        "total": total,
+                        "completed": completed,
+                        "failed": batch.request_counts.failed if batch.request_counts else 0,
+                    },
+                }
+
+            time.sleep(POLL_INTERVAL_SECONDS)
 
 
 def download_batch_results(
@@ -321,8 +329,10 @@ def parse_phase2_results(results: list[dict]) -> tuple[list[dict], dict[str, lis
             populated.append({"id": cid, "error": "invalid_json"})
             continue
 
-        # Extract suggested additions
-        suggestions = result.pop("suggested_additions", {})
+        # Extract suggested additions (LLM may return null or a list instead of a dict)
+        suggestions = result.pop("suggested_additions", {}) or {}
+        if not isinstance(suggestions, dict):
+            suggestions = {}
         for field_name, terms in suggestions.items():
             if isinstance(terms, list):
                 existing = all_suggestions.setdefault(field_name, [])

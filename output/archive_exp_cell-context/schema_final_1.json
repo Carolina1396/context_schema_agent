@@ -1,0 +1,129 @@
+{
+  "fields": [
+    {
+      "name": "cell_function_engaged",
+      "description": "Which functional role of this cell type does the drug interact with",
+      "field_type": "controlled",
+      "controlled_vocabulary": "cell_function_engaged_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "cell_metabolic_context",
+      "description": "Which metabolic program of this cell type is relevant to the drug's action",
+      "field_type": "controlled",
+      "controlled_vocabulary": "cell_metabolic_context_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "cell_stress_response",
+      "description": "Which vulnerability or stress of this cell type does the drug engage or protect against",
+      "field_type": "controlled",
+      "controlled_vocabulary": "cell_stress_response_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "receptor_class_in_cell",
+      "description": "Which receptor or target class is dominant in this cell type's response to the drug",
+      "field_type": "controlled",
+      "controlled_vocabulary": "receptor_class_in_cell_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    },
+    {
+      "name": "drug_cell_interaction_mode",
+      "description": "How the drug physically or functionally interacts with this specific cell type",
+      "field_type": "controlled",
+      "controlled_vocabulary": "drug_cell_interaction_mode_vocab",
+      "applies_to_types": [
+        "ChemicalSubstance"
+      ],
+      "required": false
+    }
+  ],
+  "controlled_vocabularies": {
+    "cell_function_engaged_vocab": [
+      "synaptic_transmission",
+      "contractility",
+      "detoxification",
+      "barrier_function",
+      "immune_surveillance",
+      "hormone_secretion",
+      "gluconeogenesis",
+      "lipid_storage",
+      "excitation_contraction_coupling",
+      "lipid_metabolism",
+      "action_potential_generation",
+      "signal_transduction",
+      "cell_survival",
+      "energy_metabolism"
+    ],
+    "cell_metabolic_context_vocab": [
+      "fatty_acid_oxidation",
+      "gluconeogenesis",
+      "glycolysis",
+      "oxidative_phosphorylation",
+      "lipogenesis",
+      "ketogenesis",
+      "amino_acid_metabolism",
+      "energy_metabolism",
+      "antioxidant_activity",
+      "specific_metabolism_unknown"
+    ],
+    "cell_stress_response_vocab": [
+      "excitotoxicity",
+      "lipotoxicity",
+      "ischemia_reperfusion",
+      "oxidative_stress",
+      "inflammation",
+      "neurodegeneration",
+      "cytokine_storm",
+      "calcium_overload",
+      "apoptosis_due_to_energy_balance",
+      "neuroprotection"
+    ],
+    "receptor_class_in_cell_vocab": [
+      "adrenergic",
+      "cholinergic",
+      "glutamatergic",
+      "nuclear_hormone",
+      "cytokine",
+      "insulin_IGF",
+      "growth_factor",
+      "toll_like",
+      "ion_channel_gated",
+      "histamine"
+    ],
+    "drug_cell_interaction_mode_vocab": [
+      "direct_target",
+      "metabolized_by_cell",
+      "indirect_modulation",
+      "bystander_effect",
+      "synergistic",
+      "antagonistic",
+      "transcriptional_regulation",
+      "epigenetic_modulation",
+      "modulation_of_signaling_pathways"
+    ]
+  },
+  "type_specific_fields": {
+    "ChemicalSubstance": [
+      "cell_function_engaged",
+      "cell_metabolic_context",
+      "cell_stress_response",
+      "receptor_class_in_cell",
+      "drug_cell_interaction_mode"
+    ]
+  },
+  "notes": "Experiment C: cell-type-characteristic drug context schema. Fields are designed to encode what is biologically distinctive about each cell type rather than generic drug properties. Each vocabulary term implicitly identifies a cell type (e.g. contractility=cardiomyocyte, excitotoxicity=neuron, detoxification=hepatocyte) without label leakage. Designed to produce cell-type clusters under behavior-only, no-name, mean-subtraction UMAP."
+}

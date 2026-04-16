@@ -1,0 +1,5 @@
+.env
+__pycache__/
+output/archive_cell_context/
+db/nodes.csv
+*.npy

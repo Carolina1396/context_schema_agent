@@ -1,0 +1,7510 @@
+[
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "skin",
+      "oral_cavity",
+      "lung",
+      "intestine"
+    ],
+    "cell_type": [
+      "endothelial",
+      "macrophage",
+      "T_cell",
+      "B_cell"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "integumentary",
+      "lymphatic",
+      "respiratory",
+      "digestive"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "angiogenesis",
+      "inflammation",
+      "immune_response",
+      "cell_proliferation"
+    ],
+    "molecular_function": [
+      "oncogene",
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "signaling",
+      "angiogenesis"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "tumoral",
+      "pathological"
+    ],
+    "chemical_classification": [
+      "small_molecule",
+      "synthetic"
+    ],
+    "drug_class": [
+      "chemotherapy",
+      "antiviral"
+    ],
+    "regulatory_role": [
+      "growth_factor_regulator"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "signaling"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "DOID:8632",
+    "name": "Kaposi's sarcoma",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "bone"
+    ],
+    "cell_type": null,
+    "cellular_compartment": null,
+    "biological_system": [
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "organ_system"
+    ],
+    "biological_process": [
+      "apoptosis",
+      "angiogenesis"
+    ],
+    "molecular_function": null,
+    "pathway_category": null,
+    "mechanism_of_action": [
+      "inhibition",
+      "activation"
+    ],
+    "disease_association": [
+      "metabolic",
+      "inflammatory"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "pathological"
+    ],
+    "chemical_classification": [
+      "steroid"
+    ],
+    "drug_class": [
+      "anti_inflammatory",
+      "immunosuppressant"
+    ],
+    "regulatory_role": [
+      "growth_factor_regulator"
+    ],
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "multifactorial"
+    ],
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": null,
+    "id": "DOID:10159",
+    "name": "osteonecrosis",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "synapse"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "neurogenesis",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "ligand",
+      "ion_channel"
+    ],
+    "pathway_category": [
+      "developmental",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "protein_interaction",
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "genetic",
+      "developmental",
+      "rare_disease"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "neurological",
+      "behavioral"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": [
+      "transcription_factor"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_DNA"
+    ],
+    "inheritance_pattern": [
+      "X_linked"
+    ],
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "DOID:0050776",
+    "name": "non-syndromic X-linked intellectual disability",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "oral_cavity"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "nucleus"
+    ],
+    "biological_system": [
+      "digestive",
+      "respiratory"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "cell_proliferation",
+      "apoptosis",
+      "cell_migration"
+    ],
+    "molecular_function": [
+      "oncogene",
+      "tumor_suppressor"
+    ],
+    "pathway_category": [
+      "signal_transduction",
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation",
+      "DNA_damage_induction"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "tumoral"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "chemotherapy"
+    ],
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "DOID:50610",
+    "name": "Oral carcinoma",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "adipose",
+      "liver",
+      "muscle"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "myocyte",
+      "endothelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "endocrine",
+      "cardiovascular",
+      "digestive",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "organism"
+    ],
+    "biological_process": [
+      "metabolism",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "receptor",
+      "transporter"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "activation"
+    ],
+    "disease_association": [
+      "metabolic",
+      "cardiovascular"
+    ],
+    "clinical_relevance": [
+      "risk_factor",
+      "complication"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "metabolic"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "multifactorial"
+    ],
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "DOID:60611",
+    "name": "Metabolic syndrome",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "apoptosis",
+      "inflammation",
+      "oxidative_stress"
+    ],
+    "molecular_function": [
+      "protein_interaction"
+    ],
+    "pathway_category": [
+      "apoptosis",
+      "oxidative_phosphorylation"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "protein_degradation"
+    ],
+    "disease_association": [
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "neurological",
+      "pathological"
+    ],
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": [
+      "neuroprotective"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "MESH:C531617",
+    "name": "Amyotrophic lateral sclerosis 1",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "blood",
+      "liver",
+      "brain"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "plasma_membrane",
+      "lysosome"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "visual_system",
+      "hematopoietic"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "apoptosis"
+    ],
+    "molecular_function": [
+      "transporter",
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "inhibition",
+      "catalysis",
+      "transport"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "metabolic",
+      "rare_disease"
+    ],
+    "clinical_relevance": null,
+    "phenotype_category": [
+      "neurological",
+      "metabolic",
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "lipid-lowering_agent"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": [
+      "autosomal_recessive"
+    ],
+    "developmental_stage": [
+      "juvenile",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "MONDO:0011798",
+    "name": "Hypoprebetalipoproteinemia, acanthocytosis, retinitis pigmentosa, and pallidal degeneration",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "skin"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "integumentary"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "hair_follicle_development",
+      "keratinization",
+      "cell_proliferation",
+      "apoptosis"
+    ],
+    "molecular_function": [
+      "transcription_factor"
+    ],
+    "pathway_category": [
+      "signaling",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "genetic",
+      "rare_disease"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "symptom_management"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "developmental"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "gene_regulatory"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "MESH:C537160",
+    "name": "Hypotrichosis simplex",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "muscle",
+      "intestine"
+    ],
+    "cell_type": [
+      "myocyte",
+      "smooth_muscle_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "digestive"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "cell_proliferation",
+      "cell_cycle",
+      "apoptosis",
+      "development"
+    ],
+    "molecular_function": [
+      "oncogene"
+    ],
+    "pathway_category": [
+      "developmental",
+      "signal_transduction"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "tumoral"
+    ],
+    "chemical_classification": [
+      "small_molecule"
+    ],
+    "drug_class": [
+      "chemotherapy"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "sporadic"
+    ],
+    "developmental_stage": [
+      "pediatric"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "DOID:4053",
+    "name": "rectum rhabdomyosarcoma",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "thyroid"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "endocrine",
+      "cardiovascular",
+      "nervous_system",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "transcription_factor"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "binding"
+    ],
+    "disease_association": [
+      "autoimmune",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "metabolic"
+    ],
+    "chemical_classification": [
+      "hormone"
+    ],
+    "drug_class": [
+      "hormone_therapy"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_DNA"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "fetal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "DOID:7997",
+    "name": "thyrotoxicosis",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "bone"
+    ],
+    "cell_type": [
+      "macrophage"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "hematopoietic"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "osteoclast differentiation and function",
+      "bone resorption processes",
+      "calcium homeostasis"
+    ],
+    "molecular_function": [
+      "ion_channel"
+    ],
+    "pathway_category": [
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": [
+      "genetic",
+      "rare_disease"
+    ],
+    "clinical_relevance": [
+      "complication",
+      "symptom_management"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "pathological"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "autosomal_recessive"
+    ],
+    "developmental_stage": [
+      "infantile",
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "DOID:0110941",
+    "name": "autosomal recessive osteopetrosis 3",
+    "label": "Disease"
+  },
+  {
+    "organism": [
+      "Caenorhabditis elegans"
+    ],
+    "tissue_location": null,
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "cytoskeleton"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "mechanosensation",
+      "neurogenesis"
+    ],
+    "molecular_function": [
+      "structural_protein",
+      "neuronal_signal_transmission"
+    ],
+    "pathway_category": null,
+    "mechanism_of_action": [
+      "protein_interaction"
+    ],
+    "disease_association": null,
+    "clinical_relevance": null,
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "Mendelian"
+    ],
+    "developmental_stage": [
+      "larval"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "NCBIGene:181678",
+    "name": "mec-5",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Caenorhabditis elegans"
+    ],
+    "tissue_location": [
+      "brain",
+      "gonadal_cell"
+    ],
+    "cell_type": [
+      "neuron",
+      "gonadal_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "reproductive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "transcription",
+      "development"
+    ],
+    "molecular_function": [
+      "RNA_binding_protein"
+    ],
+    "pathway_category": null,
+    "mechanism_of_action": [
+      "binding",
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "neurodegenerative"
+    ],
+    "clinical_relevance": null,
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "activator",
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_RNA"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "larval",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "developmental_stage_specific"
+    ],
+    "id": "NCBIGene:181313",
+    "name": "C34F6.10",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Saccharomyces cerevisiae",
+      "Arabidopsis thaliana"
+    ],
+    "tissue_location": [
+      "bone_marrow",
+      "brain",
+      "intestine"
+    ],
+    "cell_type": [
+      "neuron",
+      "proliferating_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "ribosome"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "immune",
+      "digestive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "translation",
+      "cell_proliferation",
+      "signal_transduction",
+      "ribosomal_pathway"
+    ],
+    "molecular_function": [
+      "chaperone"
+    ],
+    "pathway_category": [
+      "ribosomal_pathway"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "transport"
+    ],
+    "disease_association": [
+      "cancer",
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "activator"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_RNA"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "juvenile",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "NCBIGene:3565880",
+    "name": "col-87",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "lung",
+      "liver",
+      "kidney"
+    ],
+    "cell_type": [
+      "epithelial",
+      "fibroblast",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "endocrine",
+      "immune",
+      "musculoskeletal",
+      "cardiovascular"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "development",
+      "transcription",
+      "immune_response",
+      "cell_proliferation"
+    ],
+    "molecular_function": [
+      "transcription_factor"
+    ],
+    "pathway_category": [
+      "signaling",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "cancer",
+      "developmental",
+      "fibrosis"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": [
+      "activator",
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_DNA"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "developmental"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific",
+      "inducible"
+    ],
+    "id": "CPX:CPX-1",
+    "name": "SMAD2-SMAD3-SMAD4 complex",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "brain",
+      "heart",
+      "spleen",
+      "lymph_node"
+    ],
+    "cell_type": [
+      "neuron",
+      "T_cell",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "immune",
+      "cardiovascular"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "immune_response",
+      "neurogenesis",
+      "development"
+    ],
+    "molecular_function": [
+      "phosphatase"
+    ],
+    "pathway_category": [
+      "signaling",
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "post_translational_modification"
+    ],
+    "disease_association": [
+      "cardiovascular",
+      "neurodegenerative",
+      "autoimmune"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": [
+      "immunosuppressant"
+    ],
+    "regulatory_role": [
+      "activator"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "CPX:CPX-1001",
+    "name": "Calcineurin-Calmodulin complex, gamma-R1 variant",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "brain",
+      "heart",
+      "muscle"
+    ],
+    "cell_type": [
+      "T_cell",
+      "B_cell",
+      "neuron",
+      "cardiomyocyte"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular",
+      "immune"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "immune_response",
+      "neurotransmission",
+      "development",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "phosphatase"
+    ],
+    "pathway_category": [
+      "signaling",
+      "developmental",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "post_translational_modification"
+    ],
+    "disease_association": [
+      "autoimmune",
+      "cardiovascular",
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": [
+      "immunosuppressant"
+    ],
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "CPX:CPX-1002",
+    "name": "Calcineurin-Calmodulin complex, beta-R2 variant",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Danio rerio",
+      "Xenopus laevis",
+      "Arabidopsis thaliana"
+    ],
+    "tissue_location": [
+      "brain",
+      "heart",
+      "muscle",
+      "intestine",
+      "kidney"
+    ],
+    "cell_type": [
+      "neuron",
+      "cardiomyocyte",
+      "epithelial",
+      "renal_tubular_cell"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "calcium_homeostasis",
+      "muscle_contraction",
+      "neurotransmission"
+    ],
+    "molecular_function": [
+      "transporter"
+    ],
+    "pathway_category": [
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "transport",
+      "catalysis"
+    ],
+    "disease_association": [
+      "cardiovascular",
+      "neurodegenerative",
+      "genetic"
+    ],
+    "clinical_relevance": null,
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "developmental_stage_specific"
+    ],
+    "id": "UniProt:G4VID8",
+    "name": "plasma membrane calcium transporting ATPase",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "muscle",
+      "liver"
+    ],
+    "cell_type": null,
+    "cellular_compartment": null,
+    "biological_system": [
+      "musculoskeletal",
+      "immune"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction",
+      "immune_response"
+    ],
+    "molecular_function": [
+      "enzyme",
+      "structural_protein"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "catalysis"
+    ],
+    "disease_association": null,
+    "clinical_relevance": null,
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "UniProt:A0A068YDQ5",
+    "name": "EmuJ_001042100.1",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Danio rerio",
+      "Xenopus laevis",
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "bacteria",
+      "plants"
+    ],
+    "tissue_location": [
+      "muscle",
+      "brain",
+      "bone"
+    ],
+    "cell_type": [
+      "myocyte",
+      "neuron",
+      "fibroblast"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "development",
+      "protein_folding"
+    ],
+    "molecular_function": [
+      "structural_protein",
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "catalysis",
+      "protein_interaction"
+    ],
+    "disease_association": [
+      "genetic",
+      "developmental"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "biochemical"
+    ],
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic",
+      "developmental"
+    ],
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "NCBIGene:172447",
+    "name": "gly-19",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "brain",
+      "liver",
+      "blood"
+    ],
+    "cell_type": [
+      "neuron",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "immune"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "apoptosis",
+      "cell_proliferation",
+      "immune_response",
+      "neurogenesis"
+    ],
+    "molecular_function": [
+      "RNA_binding_protein"
+    ],
+    "pathway_category": [
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "cancer",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "nucleic_acid"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_RNA"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "RNAC:URS0000693E92_9606",
+    "name": "Homo sapiens microRNA mir-1255",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "brain",
+      "liver",
+      "blood"
+    ],
+    "cell_type": [
+      "B_cell",
+      "T_cell",
+      "proliferating_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "immune",
+      "hematopoietic",
+      "integumentary"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "cell_cycle",
+      "apoptosis",
+      "cell_proliferation",
+      "development"
+    ],
+    "molecular_function": [
+      "transcription_factor",
+      "oncogene"
+    ],
+    "pathway_category": [
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation",
+      "activation"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": [
+      "tumoral"
+    ],
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "co_activator"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_DNA"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "NCBIGene:26292",
+    "name": "MYCBP",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "breast",
+      "endometrium",
+      "ovarian_follicles"
+    ],
+    "cell_type": [
+      "gonadal_cell",
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "reproductive",
+      "endocrine"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "oogenesis",
+      "menstrual_cycle",
+      "development"
+    ],
+    "molecular_function": [
+      "hormone",
+      "receptor"
+    ],
+    "pathway_category": [
+      "developmental",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "reproductive_disorder",
+      "infertility"
+    ],
+    "clinical_relevance": [
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "synthetic",
+      "hormone",
+      "steroid"
+    ],
+    "drug_class": [
+      "agonist",
+      "hormone_therapy"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "CHEBI:31580",
+    "name": "ethynodiol diacetate",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "heart",
+      "blood"
+    ],
+    "cell_type": [
+      "smooth_muscle_cell",
+      "endothelial"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "cardiovascular"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "angiogenesis"
+    ],
+    "molecular_function": [
+      "ligand"
+    ],
+    "pathway_category": [
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "activation"
+    ],
+    "disease_association": [
+      "cardiovascular"
+    ],
+    "clinical_relevance": [
+      "treatment_response",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "synthetic"
+    ],
+    "drug_class": [
+      "vasodilator"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "CHEBI:6061",
+    "name": "isosorbide dinitrate",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "plants"
+    ],
+    "tissue_location": [
+      "adipose",
+      "muscle"
+    ],
+    "cell_type": [
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "ligand",
+      "receptor"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "binding"
+    ],
+    "disease_association": [
+      "cardiovascular",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "drug"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "biochemical"
+    ],
+    "chemical_classification": [
+      "alkaloid"
+    ],
+    "drug_class": [
+      "agonist"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "CHEBI:29081",
+    "name": "synephrine",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "synapse"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "inflammation",
+      "autophagy",
+      "neurogenesis"
+    ],
+    "molecular_function": [
+      "ion_channel",
+      "neuronal_signal_transmission"
+    ],
+    "pathway_category": [
+      "neurotransmission",
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": [
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "treatment_response",
+      "drug"
+    ],
+    "phenotype_category": [
+      "neurological"
+    ],
+    "chemical_classification": [
+      "small_molecule"
+    ],
+    "drug_class": [
+      "inhibitor",
+      "anticonvulsant"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "MESH:C000025",
+    "name": "ethosuximide, quinacrine drug combination",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "plants"
+    ],
+    "tissue_location": [
+      "liver",
+      "blood"
+    ],
+    "cell_type": [
+      "hepatocyte"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "immune"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "ligand",
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "inhibition",
+      "activation"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "small_molecule",
+      "synthetic"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "activator"
+    ],
+    "interaction_type": [
+      "metabolic",
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": null,
+    "id": "MESH:C000109",
+    "name": "azabicyclane",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "gonads",
+      "adrenal_glands"
+    ],
+    "cell_type": [
+      "gonadal_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "endoplasmic_reticulum"
+    ],
+    "biological_system": [
+      "endocrine",
+      "reproductive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "metabolism",
+      "development"
+    ],
+    "molecular_function": [
+      "enzyme",
+      "ligand"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "catalysis",
+      "binding"
+    ],
+    "disease_association": [
+      "reproductive_disorder",
+      "infertility"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "reproductive"
+    ],
+    "chemical_classification": [
+      "steroid"
+    ],
+    "drug_class": [
+      "hormone_therapy"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "condition_specific"
+    ],
+    "id": "MESH:C000152",
+    "name": "androsta-5,16-dien-3 beta-ol",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "bacteria",
+      "plants"
+    ],
+    "tissue_location": [
+      "brain",
+      "heart",
+      "liver"
+    ],
+    "cell_type": [
+      "neuron",
+      "hepatocyte",
+      "cardiomyocyte"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "endoplasmic_reticulum",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular",
+      "metabolic"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "metabolism"
+    ],
+    "molecular_function": [
+      "ligand",
+      "neuronal_signal_transmission"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "activation"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "cardiovascular",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "biomarker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "small_molecule",
+      "lipid"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "metabolic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic",
+      "postnatal"
+    ],
+    "taxonomic_domain": [
+      "bacteria",
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific",
+      "tissue_specific"
+    ],
+    "id": "MESH:D050337",
+    "name": "Trimethyl Ammonium Compounds",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "synapse"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "neurogenesis",
+      "neurotransmission"
+    ],
+    "molecular_function": [
+      "neuronal_signal_transmission",
+      "ligand"
+    ],
+    "pathway_category": [
+      "signaling",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "activation"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "psychiatric"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "potential_biomarker"
+    ],
+    "phenotype_category": [
+      "neurological"
+    ],
+    "chemical_classification": [
+      "peptide"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "CHEBI:73688",
+    "name": "Ac-Asp-Glu",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "intestine"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "digestive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "metabolism"
+    ],
+    "molecular_function": [
+      "receptor"
+    ],
+    "pathway_category": [
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "inhibition",
+      "binding"
+    ],
+    "disease_association": [
+      "chronic_inflammatory_diseases"
+    ],
+    "clinical_relevance": [
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "synthetic"
+    ],
+    "drug_class": [
+      "H2_antagonist"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "CHEBI:7847",
+    "name": "oxmetidine",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "breast"
+    ],
+    "cell_type": [
+      "gonadal_cell",
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "endocrine",
+      "reproductive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "cell_proliferation",
+      "apoptosis",
+      "signal_transduction",
+      "transcription"
+    ],
+    "molecular_function": [
+      "receptor"
+    ],
+    "pathway_category": [
+      "signaling",
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "binding"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "small_molecule"
+    ],
+    "drug_class": [
+      "antagonist"
+    ],
+    "regulatory_role": [
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "CHEBI:31855",
+    "name": "miproxifene phosphate",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "blood",
+      "skin",
+      "breast"
+    ],
+    "cell_type": [
+      "immune_cell",
+      "proliferating_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "immune",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "apoptosis",
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "enzyme",
+      "receptor"
+    ],
+    "pathway_category": [
+      "apoptosis",
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "inhibition",
+      "binding"
+    ],
+    "disease_association": [
+      "cancer",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": [
+      "cellular",
+      "biochemical"
+    ],
+    "chemical_classification": [
+      "small_molecule",
+      "synthetic"
+    ],
+    "drug_class": [
+      "inhibitor"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": null,
+    "id": "CHEBI:108992",
+    "name": "4-(2-naphthalenyloxymethyl)-2-thiazolamine",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Danio rerio",
+      "Xenopus laevis"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "synapse"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "endocrine"
+    ],
+    "biological_scale": [
+      "organism"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "neuronal_signal_transmission"
+    ],
+    "pathway_category": [
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "psychiatric"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "behavioral",
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "hypnotic"
+    ],
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "regulatory"
+    ],
+    "inheritance_pattern": [
+      "polygenic"
+    ],
+    "developmental_stage": [
+      "adult",
+      "infantile"
+    ],
+    "taxonomic_domain": [
+      "metazoa"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "GO:0030431",
+    "name": "sleep",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "bacteria"
+    ],
+    "tissue_location": [
+      "blood",
+      "bone_marrow"
+    ],
+    "cell_type": [
+      "proliferating_cell",
+      "epithelial",
+      "gonadal_cell",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "hematopoietic",
+      "immune"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "DNA_repair",
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "molecular_function": [
+      "DNA_damage_response"
+    ],
+    "pathway_category": [
+      "DNA_repair",
+      "cell_cycle"
+    ],
+    "mechanism_of_action": [
+      "DNA_damage_induction"
+    ],
+    "disease_association": [
+      "cancer",
+      "genetic",
+      "aging"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": [
+      "tumor_suppressor"
+    ],
+    "interaction_type": [
+      "protein_DNA"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic",
+      "fetal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific",
+      "developmental_stage_specific"
+    ],
+    "id": "GO:0031052",
+    "name": "chromosome breakage",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "muscle"
+    ],
+    "cell_type": [
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "endocrine",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "autophagy",
+      "inflammation",
+      "metabolism"
+    ],
+    "molecular_function": [
+      "ubiquitin_ligase",
+      "transcription_factor"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling",
+      "autophagy"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation",
+      "protein_degradation"
+    ],
+    "disease_association": [
+      "sarcopenia",
+      "cancer",
+      "neurodegenerative",
+      "aging"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "metabolic"
+    ],
+    "chemical_classification": [
+      "protein",
+      "hormone"
+    ],
+    "drug_class": [
+      "hormone_therapy",
+      "anti_inflammatory"
+    ],
+    "regulatory_role": [
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota",
+      "metazoa"
+    ],
+    "expression_context": [
+      "condition_specific",
+      "inducible"
+    ],
+    "id": "GO:0014732",
+    "name": "skeletal muscle atrophy",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "kidney",
+      "lung",
+      "skin"
+    ],
+    "cell_type": [
+      "B_cell",
+      "macrophage",
+      "Mast_cell",
+      "neutrophil"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "immune",
+      "urinary",
+      "respiratory",
+      "integumentary"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": null,
+    "pathway_category": [
+      "immune",
+      "complement"
+    ],
+    "mechanism_of_action": [
+      "increased_vascular_permeability",
+      "binding"
+    ],
+    "disease_association": [
+      "autoimmune",
+      "inflammatory"
+    ],
+    "clinical_relevance": [
+      "complication",
+      "symptom_management"
+    ],
+    "phenotype_category": [
+      "immunological",
+      "pathological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "anti_inflammatory"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "GO:0001802",
+    "name": "type III hypersensitivity",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "skin",
+      "spleen",
+      "lymph_node"
+    ],
+    "cell_type": [
+      "T_cell",
+      "macrophage",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "immune",
+      "integumentary"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": null,
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "activation"
+    ],
+    "disease_association": [
+      "autoimmune",
+      "allergic_conditions",
+      "inflammatory"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "symptom_management"
+    ],
+    "phenotype_category": [
+      "immunological",
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "immunosuppressant"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult",
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "GO:0001806",
+    "name": "type IV hypersensitivity",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster"
+    ],
+    "tissue_location": [
+      "skin",
+      "lung",
+      "intestine"
+    ],
+    "cell_type": [
+      "Mast_cell",
+      "T_cell",
+      "B_cell",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "immune",
+      "integumentary",
+      "respiratory",
+      "digestive"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": null,
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "increased_vascular_permeability"
+    ],
+    "disease_association": [
+      "allergic_conditions",
+      "autoimmune"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "treatment_response"
+    ],
+    "phenotype_category": [
+      "immunological",
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "antihistamine",
+      "anti_inflammatory"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "signaling"
+    ],
+    "inheritance_pattern": [
+      "multifactorial"
+    ],
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "GO:0002524",
+    "name": "hypersensitivity",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "spleen",
+      "lymph_node"
+    ],
+    "cell_type": [
+      "macrophage",
+      "B_cell",
+      "T_cell"
+    ],
+    "cellular_compartment": [
+      "endosome",
+      "lysosome"
+    ],
+    "biological_system": [
+      "immune"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "immune_response"
+    ],
+    "molecular_function": [
+      "ligand"
+    ],
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "binding"
+    ],
+    "disease_association": [
+      "autoimmune",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "monoclonal_antibody",
+      "vaccine"
+    ],
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "Mendelian"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "GO:0002503",
+    "name": "peptide antigen assembly with MHC class II protein complex",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Danio rerio"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "stem_cell",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "development",
+      "neurogenesis"
+    ],
+    "molecular_function": [
+      "transcription_factor"
+    ],
+    "pathway_category": [
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "inhibition",
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "developmental",
+      "psychiatric",
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "developmental",
+      "neurological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "inhibitor"
+    ],
+    "regulatory_role": [
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_DNA",
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "GO:0002085",
+    "name": "inhibition of neuroepithelial cell differentiation",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "adipose",
+      "muscle",
+      "liver",
+      "pancreas"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "receptor",
+      "kinase"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "binding"
+    ],
+    "disease_association": [
+      "metabolic",
+      "cardiovascular"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "hormone",
+      "peptide"
+    ],
+    "drug_class": [
+      "hormone_therapy"
+    ],
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "polygenic"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "condition_specific"
+    ],
+    "id": "GO:0005009",
+    "name": "insulin-activated receptor activity",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "bacteria",
+      "plants",
+      "Homo sapiens",
+      "Mus musculus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans"
+    ],
+    "tissue_location": [
+      "brain",
+      "liver",
+      "intestine",
+      "skin"
+    ],
+    "cell_type": [
+      "neuron",
+      "hepatocyte",
+      "epithelial",
+      "macrophage"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "endosome"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "immune",
+      "digestive"
+    ],
+    "biological_scale": [
+      "cellular"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "development",
+      "cell_proliferation"
+    ],
+    "molecular_function": [
+      "transporter",
+      "GTPase"
+    ],
+    "pathway_category": [
+      "signaling",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "transport"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "cancer",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "GO:0048227",
+    "name": "plasma membrane to endosome transport",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans"
+    ],
+    "tissue_location": [
+      "muscle",
+      "brain"
+    ],
+    "cell_type": [
+      "neuron",
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "neurotransmission",
+      "development"
+    ],
+    "molecular_function": [
+      "ion_channel",
+      "receptor"
+    ],
+    "pathway_category": [
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "binding",
+      "synaptic_transmission"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "autoimmune"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "neurological"
+    ],
+    "chemical_classification": [
+      "small_molecule"
+    ],
+    "drug_class": [
+      "agonist",
+      "antagonist"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic",
+      "neonatal",
+      "postnatal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "GO:0030549",
+    "name": "acetylcholine receptor activator activity",
+    "label": "BiologicalProcessOrActivity"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "lung",
+      "oral_cavity",
+      "oropharynx"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "respiratory"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "viral_replication",
+      "immune_response"
+    ],
+    "molecular_function": [
+      "receptor",
+      "structural_protein"
+    ],
+    "pathway_category": [
+      "viral_replication"
+    ],
+    "mechanism_of_action": [
+      "viral_entry"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "infectious_disease"
+    ],
+    "chemical_classification": [
+      "nucleic_acid"
+    ],
+    "drug_class": [
+      "antiviral"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "pediatric",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "virus"
+    ],
+    "expression_context": null,
+    "id": "NCBITaxon:11520",
+    "name": "Influenza B virus",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "bacteria"
+    ],
+    "tissue_location": [
+      "kidney"
+    ],
+    "cell_type": null,
+    "cellular_compartment": null,
+    "biological_system": [
+      "immune",
+      "urinary"
+    ],
+    "biological_scale": [
+      "organism",
+      "population"
+    ],
+    "biological_process": [
+      "metabolism",
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "ligand"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "host_cell_invasion"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "infectious_disease"
+    ],
+    "chemical_classification": [
+      "antibiotic"
+    ],
+    "drug_class": [
+      "antibiotic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "juvenile"
+    ],
+    "taxonomic_domain": [
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:100053",
+    "name": "Leptospira alexanderi",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "bacteria"
+    ],
+    "tissue_location": null,
+    "cell_type": null,
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "microbial_system"
+    ],
+    "biological_scale": [
+      "microbial_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "nutrient_cycling"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "nutrient_cycling"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": null,
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "natural_product",
+      "antibiotic"
+    ],
+    "drug_class": [
+      "antibiotic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": [
+      "asexual",
+      "horizontal_gene_transfer"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:1000566",
+    "name": "Saccharopolyspora lacisalsi",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "liver",
+      "spleen",
+      "blood"
+    ],
+    "cell_type": [
+      "endothelial",
+      "fibroblast",
+      "macrophage"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "immune",
+      "cardiovascular"
+    ],
+    "biological_scale": [
+      "organism",
+      "cellular"
+    ],
+    "biological_process": [
+      "viral_replication",
+      "immune_response"
+    ],
+    "molecular_function": [
+      "structural_protein"
+    ],
+    "pathway_category": [
+      "viral_replication"
+    ],
+    "mechanism_of_action": [
+      "viral_entry"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "biomarker"
+    ],
+    "phenotype_category": [
+      "infectious_disease"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "virus"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "WD:Q1010102",
+    "name": "Bunyaviridae",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "intestine",
+      "heart",
+      "brain"
+    ],
+    "cell_type": [
+      "epithelial",
+      "cardiomyocyte",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "digestive",
+      "musculoskeletal",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "viral_replication",
+      "apoptosis",
+      "immune_response"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "viral_replication"
+    ],
+    "mechanism_of_action": [
+      "viral_entry"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "complication"
+    ],
+    "phenotype_category": [
+      "infectious_disease"
+    ],
+    "chemical_classification": [
+      "nucleic_acid"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "virus"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "WD:Q1138287",
+    "name": "Coxsackievirus",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "bacteria"
+    ],
+    "tissue_location": [
+      "corneal_epithelial_cells"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "ocular_system",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "ecosystem"
+    ],
+    "biological_process": [
+      "phagocytosis",
+      "inflammation",
+      "encystment"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "nutrient_cycling"
+    ],
+    "mechanism_of_action": [
+      "host_cell_invasion",
+      "membrane_disruption"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "complication"
+    ],
+    "phenotype_category": [
+      "infectious_disease",
+      "ocular_infection"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": [
+      "asexual"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota",
+      "protist"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "WD:Q1152218",
+    "name": "Acanthamoeba",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "bacteria"
+    ],
+    "tissue_location": [
+      "lung"
+    ],
+    "cell_type": null,
+    "cellular_compartment": [
+      "ribosome",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "respiratory"
+    ],
+    "biological_scale": [
+      "organism",
+      "population",
+      "ecosystem"
+    ],
+    "biological_process": [
+      "metabolism",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "nutrient_cycling",
+      "decomposition"
+    ],
+    "mechanism_of_action": [
+      "host_cell_invasion"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "complication",
+      "diagnostic_marker"
+    ],
+    "phenotype_category": [
+      "infectious_disease"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "antibiotic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:1463564",
+    "name": "Nocardia casuarinae",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "bacteria"
+    ],
+    "tissue_location": [
+      "intestine"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "digestive",
+      "microbiome"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organism"
+    ],
+    "biological_process": [
+      "metabolism",
+      "immune_response"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": [
+      "infectious",
+      "autoimmune"
+    ],
+    "clinical_relevance": [
+      "symptom_management",
+      "potential_biomarker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "natural_product"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "commensal"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "infantile",
+      "postnatal"
+    ],
+    "taxonomic_domain": [
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:481723",
+    "name": "Lactobacillus rapi",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "intestine"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": null,
+    "biological_system": [
+      "digestive"
+    ],
+    "biological_scale": [
+      "organism"
+    ],
+    "biological_process": [
+      "metabolism",
+      "development"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "catalysis"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "treatment_response"
+    ],
+    "phenotype_category": [
+      "pathological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "anthelmintic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "larval",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "NCBITaxon:6252",
+    "name": "Ascaris lumbricoides",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "plants"
+    ],
+    "tissue_location": null,
+    "cell_type": [
+      "plant_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "photosynthetic_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organism"
+    ],
+    "biological_process": [
+      "viral_replication"
+    ],
+    "molecular_function": null,
+    "pathway_category": [
+      "viral_replication"
+    ],
+    "mechanism_of_action": [
+      "viral_entry"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "agricultural_biocontrol"
+    ],
+    "phenotype_category": [
+      "pathological",
+      "infectious_disease"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "active_growth_phase"
+    ],
+    "taxonomic_domain": [
+      "virus"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:1678786",
+    "name": "Polygonum ringspot virus",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Danio rerio"
+    ],
+    "tissue_location": [
+      "intestine"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "digestive"
+    ],
+    "biological_scale": [
+      "organism"
+    ],
+    "biological_process": [
+      "metabolism"
+    ],
+    "molecular_function": [
+      "transporter"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "binding"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "agricultural_biocontrol"
+    ],
+    "phenotype_category": [
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "anthelmintic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "larval"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:559172",
+    "name": "Raphidascaris trichiuri",
+    "label": "OrganismTaxon"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "liver",
+      "pancreas",
+      "intestine",
+      "adipose"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "enterocyte",
+      "adipocyte"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "endocrine",
+      "digestive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "development",
+      "transcription"
+    ],
+    "molecular_function": [
+      "transcription_factor"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "metabolic",
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "biochemical"
+    ],
+    "chemical_classification": [
+      "small_molecule",
+      "protein",
+      "hormone"
+    ],
+    "drug_class": [
+      "agonist",
+      "hormone_therapy"
+    ],
+    "regulatory_role": [
+      "activator",
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_DNA"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "fetal",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "InterPro:IPR000003",
+    "name": "Retinoid X receptor/HNF4",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Danio rerio",
+      "Xenopus laevis"
+    ],
+    "tissue_location": [
+      "liver",
+      "kidney",
+      "intestine",
+      "skin"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "renal_tubular_cell",
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "integumentary",
+      "urinary",
+      "digestive"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "oxidative_stress",
+      "inflammation",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "binding"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "binding"
+    ],
+    "disease_association": [
+      "toxic_exposure",
+      "cancer",
+      "neurodegenerative",
+      "inflammatory"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "inducible",
+      "condition_specific"
+    ],
+    "id": "InterPro:IPR000006",
+    "name": "Metallothionein, vertebrate",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Drosophila melanogaster",
+      "Saccharomyces cerevisiae"
+    ],
+    "tissue_location": [
+      "brain",
+      "liver",
+      "heart",
+      "lung",
+      "muscle"
+    ],
+    "cell_type": [
+      "neuron",
+      "muscle_cell",
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular",
+      "endocrine"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "cell_cycle",
+      "apoptosis",
+      "signal_transduction",
+      "metabolism"
+    ],
+    "molecular_function": [
+      "phosphatase"
+    ],
+    "pathway_category": [
+      "signaling",
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "binding"
+    ],
+    "disease_association": [
+      "cancer",
+      "neurodegenerative",
+      "cardiovascular"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "activator"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "InterPro:IPR000009",
+    "name": "Protein phosphatase 2A regulatory subunit PR55",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Methanococcus maripaludis",
+      "Halobacterium salinarum",
+      "archaea"
+    ],
+    "tissue_location": null,
+    "cell_type": null,
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": null,
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "translation",
+      "metabolism"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "ribosomal_pathway"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": null,
+    "clinical_relevance": null,
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "enzymatic"
+    ],
+    "inheritance_pattern": [
+      "asexual"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "archaea"
+    ],
+    "expression_context": [
+      "constitutive"
+    ],
+    "id": "InterPro:IPR020791",
+    "name": "Leucine-tRNA ligase, archaeal",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Caenorhabditis elegans",
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "brain",
+      "muscle"
+    ],
+    "cell_type": [
+      "neuron",
+      "myocyte",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "endoplasmic_reticulum",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "musculoskeletal",
+      "immune"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "autophagy",
+      "cell_survival"
+    ],
+    "molecular_function": [
+      "kinase"
+    ],
+    "pathway_category": [
+      "autophagy"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "cancer",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "InterPro:IPR017184",
+    "name": "Serine/threonine-protein kinase Unc-51",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Escherichia coli",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "neurogenesis",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "psychiatric"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "developmental"
+    ],
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "InterPro:IPR011248",
+    "name": "Serine/alanine racemase",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Escherichia coli",
+      "bacteria"
+    ],
+    "tissue_location": [
+      "intestine",
+      "testis",
+      "bone"
+    ],
+    "cell_type": [
+      "stem_cell",
+      "gonadal_cell",
+      "proliferating_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "digestive",
+      "reproductive",
+      "hematopoietic"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "DNA_repair",
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "molecular_function": [
+      "ubiquitin_ligase",
+      "DNA_damage_response",
+      "enzyme"
+    ],
+    "pathway_category": [
+      "DNA_repair"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "binding",
+      "protein_interaction"
+    ],
+    "disease_association": [
+      "cancer",
+      "genetic"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein",
+      "protein_DNA"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "InterPro:IPR038973",
+    "name": "DNA mismatch repair protein MutL/Mlh/Pms",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Escherichia coli",
+      "plants",
+      "bacteria"
+    ],
+    "tissue_location": [
+      "liver",
+      "kidney",
+      "intestine",
+      "brain"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "renal_tubular_cell",
+      "endothelial",
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "digestive",
+      "urinary",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "autophagy",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "transporter"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "autophagy"
+    ],
+    "mechanism_of_action": [
+      "transport"
+    ],
+    "disease_association": [
+      "cancer",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "risk_factor"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "inhibitor",
+      "antibiotic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "polygenic"
+    ],
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "InterPro:IPR005694",
+    "name": "Efflux pump membrane protein",
+    "label": "GeneFamily"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "plants"
+    ],
+    "tissue_location": [
+      "skin",
+      "ocular_system"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "integumentary",
+      "visual_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organism"
+    ],
+    "biological_process": [
+      "metabolism",
+      "development",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "enzyme",
+      "transporter"
+    ],
+    "pathway_category": [
+      "pigmentation"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "genetic"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "risk_factor"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "developmental"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "enzymatic"
+    ],
+    "inheritance_pattern": [
+      "autosomal_recessive",
+      "X_linked"
+    ],
+    "developmental_stage": [
+      "neonatal",
+      "infantile"
+    ],
+    "taxonomic_domain": [
+      "eukarya"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "HP:0001022",
+    "name": "Albinism",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "bone"
+    ],
+    "cell_type": [
+      "fibroblast"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "development",
+      "cell_proliferation"
+    ],
+    "molecular_function": [
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "developmental",
+      "rare_disease"
+    ],
+    "clinical_relevance": [
+      "complication",
+      "treatment_response"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "developmental"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": [
+      "activator"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": [
+      "infantile"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "HP:0000243",
+    "name": "Trigonocephaly",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "bone",
+      "oral_cavity"
+    ],
+    "cell_type": [
+      "chondrocyte",
+      "osteoblast",
+      "fibroblast"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "respiratory",
+      "digestive"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "development",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "developmental",
+      "rare_disease",
+      "genetic"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "developmental"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "signaling"
+    ],
+    "inheritance_pattern": [
+      "sporadic",
+      "multifactorial"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "postnatal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "HP:0007627",
+    "name": "Mandibular condyle aplasia",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "cell_cycle",
+      "apoptosis",
+      "angiogenesis",
+      "cell_proliferation",
+      "cell_survival"
+    ],
+    "molecular_function": [
+      "oncogene",
+      "tumor_suppressor"
+    ],
+    "pathway_category": [
+      "cell_cycle",
+      "apoptosis",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "diagnostic_marker"
+    ],
+    "phenotype_category": [
+      "tumoral",
+      "pathological"
+    ],
+    "chemical_classification": [
+      "small_molecule",
+      "protein"
+    ],
+    "drug_class": [
+      "chemotherapy"
+    ],
+    "regulatory_role": [
+      "activator"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_DNA"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant"
+    ],
+    "developmental_stage": [
+      "adult",
+      "pediatric"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "HP:0004375",
+    "name": "Neoplasm of the nervous system",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Danio rerio"
+    ],
+    "tissue_location": [
+      "bone_marrow",
+      "blood",
+      "lymph_node"
+    ],
+    "cell_type": [
+      "B_cell",
+      "T_cell",
+      "immune_cell",
+      "stem_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "hematopoietic",
+      "immune"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "cell_cycle",
+      "apoptosis",
+      "immune_response",
+      "cell_proliferation",
+      "cell_survival"
+    ],
+    "molecular_function": [
+      "oncogene",
+      "tumor_suppressor"
+    ],
+    "pathway_category": [
+      "cell_cycle",
+      "apoptosis",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation",
+      "protein_interaction"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "tumoral",
+      "pathological"
+    ],
+    "chemical_classification": [
+      "small_molecule",
+      "protein"
+    ],
+    "drug_class": [
+      "chemotherapy",
+      "monoclonal_antibody"
+    ],
+    "regulatory_role": [
+      "activator",
+      "repressor"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "genetic",
+      "signaling"
+    ],
+    "inheritance_pattern": [
+      "sporadic",
+      "familial"
+    ],
+    "developmental_stage": [
+      "adult",
+      "childhood",
+      "pediatric"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "HP:0004377",
+    "name": "Hematological neoplasm",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "stomach"
+    ],
+    "cell_type": [
+      "epithelial",
+      "macrophage"
+    ],
+    "cellular_compartment": null,
+    "biological_system": [
+      "digestive"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "inflammation",
+      "immune_response"
+    ],
+    "molecular_function": null,
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": [
+      "chronic_inflammatory_diseases"
+    ],
+    "clinical_relevance": [
+      "complication",
+      "risk_factor"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "pathological"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "proton_pump_inhibitor",
+      "H2_antagonist",
+      "anti_inflammatory"
+    ],
+    "regulatory_role": [
+      "immune_regulator"
+    ],
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "HP:0005231",
+    "name": "Chronic gastritis",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": null,
+    "cell_type": [
+      "trophoblast"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "reproductive"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "angiogenesis",
+      "cellular_differentiation"
+    ],
+    "molecular_function": [
+      "growth_factor_regulator"
+    ],
+    "pathway_category": null,
+    "mechanism_of_action": [
+      "increased_vascular_permeability"
+    ],
+    "disease_association": [
+      "reproductive_disorder",
+      "developmental"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "risk_factor"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "physiological",
+      "pathological"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "sporadic"
+    ],
+    "developmental_stage": [
+      "prenatal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "HP:0011414",
+    "name": "Hydropic placenta",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "muscle",
+      "skin",
+      "adipose",
+      "bone"
+    ],
+    "cell_type": [
+      "myocyte",
+      "adipocyte"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "integumentary"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "cell_proliferation",
+      "signal_transduction",
+      "apoptosis"
+    ],
+    "molecular_function": [
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "signaling",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "genetic",
+      "developmental",
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "risk_factor",
+      "complication"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "developmental",
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "sporadic",
+      "familial"
+    ],
+    "developmental_stage": [
+      "infantile",
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "developmental_stage_specific"
+    ],
+    "id": "HP:0001528",
+    "name": "Hemihypertrophy",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "bone"
+    ],
+    "cell_type": [
+      "osteoblast",
+      "osteoclast",
+      "osteocyte"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "development",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "inhibition",
+      "activation"
+    ],
+    "disease_association": [
+      "genetic",
+      "developmental",
+      "rare_disease"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "developmental"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "multifactorial"
+    ],
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "metazoa"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "HP:0002986",
+    "name": "Radial bowing",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "muscle"
+    ],
+    "cell_type": [
+      "myocyte",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "autophagy",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "structural_protein"
+    ],
+    "pathway_category": [
+      "autophagy"
+    ],
+    "mechanism_of_action": [
+      "protein_degradation"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "sarcopenia"
+    ],
+    "clinical_relevance": [
+      "symptom_management"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "pathological"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "autosomal_dominant",
+      "autosomal_recessive"
+    ],
+    "developmental_stage": [
+      "adult",
+      "aging"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "HP:0007126",
+    "name": "Proximal amyotrophy",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "muscle",
+      "brain"
+    ],
+    "cell_type": [
+      "neuron",
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "synapse"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "neurogenesis",
+      "development"
+    ],
+    "molecular_function": [
+      "neuronal_signal_transmission"
+    ],
+    "pathway_category": [
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "synaptic_transmission"
+    ],
+    "disease_association": [
+      "developmental",
+      "neurological"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "symptom_management"
+    ],
+    "phenotype_category": [
+      "behavioral",
+      "neurological"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": [
+      "multifactorial"
+    ],
+    "developmental_stage": [
+      "childhood"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "HP:0007010",
+    "name": "Poor fine motor coordination",
+    "label": "PhenotypicFeature"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae"
+    ],
+    "tissue_location": [
+      "brain",
+      "liver",
+      "muscle",
+      "adipose"
+    ],
+    "cell_type": [
+      "neuron",
+      "hepatocyte",
+      "T_cell",
+      "stem_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "endoplasmic_reticulum",
+      "lysosome"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction",
+      "cell_cycle",
+      "autophagy",
+      "cell_proliferation"
+    ],
+    "molecular_function": [
+      "kinase"
+    ],
+    "pathway_category": [
+      "signaling",
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "inhibition"
+    ],
+    "disease_association": [
+      "cancer",
+      "metabolic",
+      "neurodegenerative",
+      "genetic"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "small_molecule",
+      "protein"
+    ],
+    "drug_class": [
+      "inhibitor",
+      "immunosuppressant"
+    ],
+    "regulatory_role": [
+      "regulatory"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "protein_small_molecule"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "ubiquitous",
+      "tissue_specific"
+    ],
+    "id": "REACT:R-HSA-165159",
+    "name": "mTOR signalling",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "blood",
+      "liver",
+      "lymph_node",
+      "adipose",
+      "muscle"
+    ],
+    "cell_type": [
+      "macrophage",
+      "T_cell",
+      "B_cell",
+      "fibroblast",
+      "endothelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "immune",
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "inflammation",
+      "immune_response",
+      "cell_differentiation"
+    ],
+    "molecular_function": [
+      "ligand",
+      "receptor"
+    ],
+    "pathway_category": [
+      "signaling",
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "activation"
+    ],
+    "disease_association": [
+      "autoimmune",
+      "inflammatory",
+      "metabolic",
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "biologics",
+      "protein"
+    ],
+    "drug_class": [
+      "monoclonal_antibody"
+    ],
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "inducible"
+    ],
+    "id": "REACT:R-HSA-1059683",
+    "name": "Interleukin-6 signaling",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Arabidopsis thaliana",
+      "plants"
+    ],
+    "tissue_location": [
+      "brain",
+      "skin",
+      "blood",
+      "bone_marrow",
+      "intestine"
+    ],
+    "cell_type": [
+      "T_cell",
+      "B_cell",
+      "neuron",
+      "epithelial",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "immune",
+      "nervous_system",
+      "integumentary",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "apoptosis",
+      "immune_response",
+      "development",
+      "autophagy"
+    ],
+    "molecular_function": [
+      "protease",
+      "tumor_suppressor",
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "activation"
+    ],
+    "disease_association": [
+      "cancer",
+      "neurodegenerative",
+      "autoimmune"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "chemotherapy"
+    ],
+    "regulatory_role": [
+      "signal_transducer",
+      "immune_regulator"
+    ],
+    "interaction_type": [
+      "protein_protein",
+      "signaling"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "inducible"
+    ],
+    "id": "REACT:R-HSA-109581",
+    "name": "Apoptosis",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "bacteria",
+      "plants"
+    ],
+    "tissue_location": [
+      "liver",
+      "muscle"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "myocyte",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "digestive",
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "metabolic",
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": [
+      "metabolic"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "inhibitor",
+      "insulin_sensitizer"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": [
+      "Mendelian"
+    ],
+    "developmental_stage": [
+      "fetal",
+      "neonatal",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "KEGG:hsa00010",
+    "name": "Glycolysis / Gluconeogenesis",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Danio rerio",
+      "Xenopus laevis",
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "Pseudamphistomum truncatum",
+      "bacteria",
+      "plants"
+    ],
+    "tissue_location": [
+      "liver",
+      "heart",
+      "muscle",
+      "brain"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "cardiomyocyte",
+      "myocyte",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "mitochondria"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "nervous_system",
+      "digestive"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "metabolic",
+      "cancer",
+      "neurodegenerative"
+    ],
+    "clinical_relevance": null,
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "constitutive",
+      "tissue_specific"
+    ],
+    "id": "KEGG:hsa00020",
+    "name": "Citrate cycle (TCA cycle)",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "bacteria",
+      "plants",
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "liver",
+      "adipose",
+      "breast"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "proliferating_cell",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "endocrine",
+      "immune",
+      "reproductive"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "oxidative_stress"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "metabolic",
+      "genetic"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "diagnostic_marker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": [
+      "X_linked"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "neonatal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific",
+      "tissue_specific"
+    ],
+    "id": "KEGG:hsa00030",
+    "name": "Pentose phosphate pathway",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "plants",
+      "fungi",
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "liver",
+      "adipose",
+      "muscle",
+      "heart"
+    ],
+    "cell_type": [
+      "hepatocyte",
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "mitochondria",
+      "endoplasmic_reticulum"
+    ],
+    "biological_system": [
+      "endocrine",
+      "cardiovascular",
+      "digestive"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "metabolic",
+      "cardiovascular"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "metabolic"
+    ],
+    "chemical_classification": [
+      "biomolecule"
+    ],
+    "drug_class": [
+      "lipid-lowering_agent"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": [
+      "autosomal_recessive"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "fetal",
+      "infantile"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "REACT:R-CEL-75105",
+    "name": "Fatty acyl-CoA biosynthesis",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "mitochondria",
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "metabolism",
+      "neurogenesis"
+    ],
+    "molecular_function": [
+      "transporter",
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "neurotransmission"
+    ],
+    "mechanism_of_action": [
+      "transport",
+      "catalysis"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "psychiatric"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "REACT:R-HSA-210455",
+    "name": "Astrocytic Glutamate-Glutamine Uptake And Metabolism",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "brain",
+      "heart",
+      "kidney"
+    ],
+    "cell_type": [
+      "neuron",
+      "macrophage",
+      "T_cell"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular",
+      "immune"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "cardiovascular",
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "REACT:R-HSA-8850843",
+    "name": "Phosphate bond hydrolysis by NTPDase proteins",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "muscle",
+      "brain",
+      "liver",
+      "kidney"
+    ],
+    "cell_type": [
+      "neuron",
+      "myocyte",
+      "hepatocyte"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "musculoskeletal",
+      "nervous_system",
+      "urinary"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "oxidative_stress"
+    ],
+    "molecular_function": [
+      "enzyme",
+      "kinase"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "oxidative_phosphorylation"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "metabolic"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "potential_biomarker"
+    ],
+    "phenotype_category": [
+      "physiological",
+      "metabolic"
+    ],
+    "chemical_classification": [
+      "natural_product"
+    ],
+    "drug_class": [
+      "nutraceutical"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": [
+      "X_linked"
+    ],
+    "developmental_stage": [
+      "childhood",
+      "postnatal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "REACT:R-PFA-71288",
+    "name": "Creatine metabolism",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "blood",
+      "skin",
+      "pancreas"
+    ],
+    "cell_type": [
+      "T_cell"
+    ],
+    "cellular_compartment": [
+      "plasma_membrane"
+    ],
+    "biological_system": [
+      "hematopoietic",
+      "endocrine"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "cell_proliferation",
+      "cell_survival",
+      "development"
+    ],
+    "molecular_function": [
+      "receptor",
+      "oncogene"
+    ],
+    "pathway_category": [
+      "signaling",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "activation"
+    ],
+    "disease_association": [
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": [
+      "tumoral"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": [
+      "signal_transducer"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "de_novo"
+    ],
+    "developmental_stage": [
+      "developmental"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "constitutive"
+    ],
+    "id": "REACT:R-HSA-2660826",
+    "name": "Constitutive Signaling by NOTCH1 t(7,9)(NOTCH1:M1580_K2555) Translocation Mutant",
+    "label": "Pathway"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": [
+      "lung",
+      "heart",
+      "muscle",
+      "blood",
+      "bone"
+    ],
+    "cell_type": [
+      "epithelial",
+      "myocyte",
+      "neuron"
+    ],
+    "cellular_compartment": [
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "respiratory",
+      "cardiovascular",
+      "musculoskeletal"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "immune_response",
+      "development"
+    ],
+    "molecular_function": null,
+    "pathway_category": null,
+    "mechanism_of_action": [
+      "transport"
+    ],
+    "disease_association": [
+      "cardiovascular",
+      "infectious",
+      "developmental"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "antibiotic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "fetal",
+      "neonatal",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "UBERON:0000915",
+    "name": "thoracic segment of trunk",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus"
+    ],
+    "tissue_location": null,
+    "cell_type": [
+      "gonadal_cell"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "reproductive",
+      "endocrine"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "development",
+      "signal_transduction",
+      "cell_cycle"
+    ],
+    "molecular_function": [
+      "receptor",
+      "enzyme"
+    ],
+    "pathway_category": [
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "activation",
+      "gene_regulation"
+    ],
+    "disease_association": [
+      "reproductive_disorder",
+      "infertility",
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "hormone"
+    ],
+    "drug_class": [
+      "antagonist",
+      "agonist"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "metabolic"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "adult",
+      "fetal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "UBERON:0001305",
+    "name": "ovarian follicle",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "brain",
+      "oral_cavity",
+      "oropharynx"
+    ],
+    "cell_type": [
+      "neuron"
+    ],
+    "cellular_compartment": null,
+    "biological_system": [
+      "nervous_system",
+      "digestive",
+      "respiratory",
+      "cardiovascular"
+    ],
+    "biological_scale": [
+      "organ_system"
+    ],
+    "biological_process": [
+      "taste perception",
+      "swallowing reflex",
+      "cardiovascular reflexes"
+    ],
+    "molecular_function": [
+      "neuronal_signal_transmission"
+    ],
+    "pathway_category": null,
+    "mechanism_of_action": [
+      "synaptic_transmission"
+    ],
+    "disease_association": [
+      "neurodegenerative"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "neurological",
+      "physiological"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "UBERON:0001649",
+    "name": "glossopharyngeal nerve",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Danio rerio"
+    ],
+    "tissue_location": [
+      "pancreas"
+    ],
+    "cell_type": null,
+    "cellular_compartment": [
+      "endoplasmic_reticulum",
+      "golgi_apparatus"
+    ],
+    "biological_system": [
+      "endocrine",
+      "digestive"
+    ],
+    "biological_scale": [
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "ligand"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "activation"
+    ],
+    "disease_association": [
+      "metabolic",
+      "autoimmune",
+      "rare_disease",
+      "pancreatic_endocrine_tumor"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "hormone"
+    ],
+    "drug_class": [
+      "hormone_therapy"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "polygenic"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "neonatal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "UBERON:0000016",
+    "name": "endocrine pancreas",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Danio rerio"
+    ],
+    "tissue_location": [
+      "pancreas",
+      "intestine"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "endoplasmic_reticulum",
+      "golgi_apparatus",
+      "cytoplasm"
+    ],
+    "biological_system": [
+      "digestive"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "metabolism"
+    ],
+    "molecular_function": [
+      "enzyme"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "catalysis"
+    ],
+    "disease_association": [
+      "metabolic",
+      "inflammatory",
+      "cancer"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "drug"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "enzyme_replacement"
+    ],
+    "regulatory_role": [
+      "hormonal_regulator"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "autosomal_recessive"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "fetal",
+      "infantile"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "UBERON:0000017",
+    "name": "exocrine pancreas",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Drosophila melanogaster",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": null,
+    "cell_type": null,
+    "cellular_compartment": [
+      "cytoplasm",
+      "nucleus"
+    ],
+    "biological_system": [
+      "visual_system",
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "organ"
+    ],
+    "biological_process": [
+      "signal_transduction",
+      "development"
+    ],
+    "molecular_function": [
+      "receptor"
+    ],
+    "pathway_category": [
+      "developmental",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "activation"
+    ],
+    "disease_association": [
+      "genetic",
+      "developmental"
+    ],
+    "clinical_relevance": [
+      "research"
+    ],
+    "phenotype_category": [
+      "morphological",
+      "developmental"
+    ],
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "Mendelian"
+    ],
+    "developmental_stage": [
+      "embryonic"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "UBERON:0000018",
+    "name": "compound eye",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Danio rerio",
+      "Xenopus laevis",
+      "Arabidopsis thaliana",
+      "Escherichia coli",
+      "bacteria",
+      "plants"
+    ],
+    "tissue_location": [
+      "brain",
+      "liver",
+      "heart",
+      "muscle",
+      "kidney",
+      "skin"
+    ],
+    "cell_type": [
+      "neuron",
+      "hepatocyte",
+      "cardiomyocyte",
+      "myocyte"
+    ],
+    "cellular_compartment": [
+      "nucleus",
+      "cytoplasm",
+      "mitochondria",
+      "endoplasmic_reticulum",
+      "golgi_apparatus",
+      "lysosome"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "cardiovascular",
+      "musculoskeletal",
+      "immune"
+    ],
+    "biological_scale": [
+      "cellular",
+      "molecular"
+    ],
+    "biological_process": [
+      "metabolism",
+      "signal_transduction",
+      "cell_cycle",
+      "apoptosis",
+      "autophagy",
+      "translation"
+    ],
+    "molecular_function": [
+      "enzyme",
+      "transcription_factor",
+      "kinase",
+      "chaperone"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "signaling",
+      "cell_cycle",
+      "apoptosis"
+    ],
+    "mechanism_of_action": [
+      "catalysis",
+      "gene_regulation",
+      "protein_interaction"
+    ],
+    "disease_association": [
+      "cancer",
+      "neurodegenerative",
+      "metabolic",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "diagnostic_marker",
+      "biomarker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": null,
+    "taxonomic_domain": [
+      "eukaryota",
+      "bacteria"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "inducible"
+    ],
+    "id": "GO:0043656",
+    "name": "intracellular region of host",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Xenopus laevis"
+    ],
+    "tissue_location": [
+      "brain"
+    ],
+    "cell_type": [
+      "fibroblast",
+      "endothelial"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "nervous_system"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ",
+      "organ_system"
+    ],
+    "biological_process": [
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "structural_protein",
+      "ion_channel"
+    ],
+    "pathway_category": [
+      "immune",
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "increased_vascular_permeability"
+    ],
+    "disease_association": [
+      "infectious",
+      "autoimmune",
+      "inflammatory"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "UBERON:0000391",
+    "name": "leptomeninx",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Drosophila melanogaster",
+      "Caenorhabditis elegans",
+      "Saccharomyces cerevisiae",
+      "Danio rerio",
+      "Xenopus laevis",
+      "Arabidopsis thaliana"
+    ],
+    "tissue_location": [
+      "brain",
+      "bone_marrow",
+      "muscle"
+    ],
+    "cell_type": [
+      "neuron",
+      "muscle",
+      "epithelial",
+      "proliferating_cell"
+    ],
+    "cellular_compartment": [
+      "nucleus"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "hematopoietic"
+    ],
+    "biological_scale": [
+      "cellular"
+    ],
+    "biological_process": [
+      "gene_expression",
+      "mRNA_export",
+      "protein_import",
+      "signal_transduction",
+      "cell_cycle",
+      "DNA_replication"
+    ],
+    "molecular_function": [
+      "transporter"
+    ],
+    "pathway_category": [
+      "developmental"
+    ],
+    "mechanism_of_action": [
+      "transport"
+    ],
+    "disease_association": [
+      "cancer",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "embryonic",
+      "fetal"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "ubiquitous"
+    ],
+    "id": "GO:0005643",
+    "name": "nuclear pore",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus",
+      "Danio rerio",
+      "Xenopus laevis"
+    ],
+    "tissue_location": null,
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "mitochondria"
+    ],
+    "biological_system": [
+      "ocular_system",
+      "visual_system"
+    ],
+    "biological_scale": [
+      "cellular",
+      "tissue",
+      "organ"
+    ],
+    "biological_process": [
+      "metabolism",
+      "development"
+    ],
+    "molecular_function": [
+      "transporter",
+      "enzyme",
+      "growth_factor_regulator"
+    ],
+    "pathway_category": [
+      "metabolic",
+      "pigmentation"
+    ],
+    "mechanism_of_action": [
+      "transport",
+      "catalysis"
+    ],
+    "disease_association": [
+      "neurodegenerative",
+      "genetic",
+      "aging"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target",
+      "biomarker"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "antioxidant",
+      "anti_inflammatory"
+    ],
+    "regulatory_role": [
+      "growth_factor_regulator"
+    ],
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "autosomal_dominant",
+      "autosomal_recessive",
+      "X_linked"
+    ],
+    "developmental_stage": [
+      "embryonic",
+      "fetal",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific",
+      "developmental_stage_specific"
+    ],
+    "id": "UBERON:0001782",
+    "name": "retinal pigment epithelium",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Mus musculus",
+      "Rattus norvegicus"
+    ],
+    "tissue_location": [
+      "lung"
+    ],
+    "cell_type": [
+      "epithelial"
+    ],
+    "cellular_compartment": null,
+    "biological_system": [
+      "respiratory",
+      "immune"
+    ],
+    "biological_scale": [
+      "tissue",
+      "organ_system"
+    ],
+    "biological_process": [
+      "inflammation",
+      "immune_response"
+    ],
+    "molecular_function": [
+      "cilia_function"
+    ],
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": null,
+    "disease_association": [
+      "asthma",
+      "chronic_inflammatory_diseases",
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": null,
+    "drug_class": [
+      "anti_inflammatory"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "fetal",
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "UBERON:0002031",
+    "name": "epithelium of bronchus",
+    "label": "AnatomicalEntity"
+  },
+  {
+    "organism": [
+      "Homo sapiens"
+    ],
+    "tissue_location": [
+      "brain",
+      "lung"
+    ],
+    "cell_type": [
+      "epithelial",
+      "gonadal_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "primary_cilia"
+    ],
+    "biological_system": [
+      "nervous_system",
+      "respiratory",
+      "reproductive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular"
+    ],
+    "biological_process": [
+      "development",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "structural_protein",
+      "cilia_function"
+    ],
+    "pathway_category": [
+      "developmental",
+      "signaling"
+    ],
+    "mechanism_of_action": [
+      "protein_interaction"
+    ],
+    "disease_association": [
+      "genetic",
+      "reproductive_disorder",
+      "rare_disease"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "developmental",
+      "physiological"
+    ],
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": [
+      "autosomal_recessive"
+    ],
+    "developmental_stage": [
+      "embryonic"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "tissue_specific"
+    ],
+    "id": "NCBIGene:255119",
+    "name": "CFAP299",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "plants"
+    ],
+    "tissue_location": null,
+    "cell_type": [
+      "plant_cell"
+    ],
+    "cellular_compartment": [
+      "cytoplasm",
+      "vacuole"
+    ],
+    "biological_system": [
+      "photosynthetic_system"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "tissue"
+    ],
+    "biological_process": [
+      "metabolism",
+      "oxidative_stress",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "ligand"
+    ],
+    "pathway_category": [
+      "metabolic"
+    ],
+    "mechanism_of_action": [
+      "binding",
+      "oxidation_reduction"
+    ],
+    "disease_association": [
+      "oxidative_stress"
+    ],
+    "clinical_relevance": [
+      "therapeutic_target"
+    ],
+    "phenotype_category": null,
+    "chemical_classification": [
+      "natural_product",
+      "flavonoid",
+      "small_molecule"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": null,
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "developmental"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "CHEBI:69607",
+    "name": "clethroidoside G",
+    "label": "ChemicalSubstance"
+  },
+  {
+    "organism": [
+      "Homo sapiens",
+      "Pseudamphistomum truncatum"
+    ],
+    "tissue_location": [
+      "liver",
+      "intestine"
+    ],
+    "cell_type": [
+      "immune_cell"
+    ],
+    "cellular_compartment": null,
+    "biological_system": [
+      "immune",
+      "digestive"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organism"
+    ],
+    "biological_process": [
+      "immune_response",
+      "inflammation"
+    ],
+    "molecular_function": [
+      "ligand"
+    ],
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "binding"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "vaccine_target"
+    ],
+    "phenotype_category": [
+      "immunological"
+    ],
+    "chemical_classification": [
+      "protein"
+    ],
+    "drug_class": null,
+    "regulatory_role": null,
+    "interaction_type": [
+      "protein_protein"
+    ],
+    "inheritance_pattern": null,
+    "developmental_stage": [
+      "late_infection_stage"
+    ],
+    "taxonomic_domain": [
+      "eukaryota"
+    ],
+    "expression_context": [
+      "developmental_stage_specific"
+    ],
+    "id": "UniProt:G4V8Y2",
+    "name": "major egg antigen",
+    "label": "MacromolecularMachine"
+  },
+  {
+    "organism": [
+      "bacteria"
+    ],
+    "tissue_location": [
+      "blood"
+    ],
+    "cell_type": [
+      "macrophage",
+      "immune_cell"
+    ],
+    "cellular_compartment": [
+      "extracellular_matrix"
+    ],
+    "biological_system": [
+      "immune",
+      "hematopoietic"
+    ],
+    "biological_scale": [
+      "molecular",
+      "cellular",
+      "organism"
+    ],
+    "biological_process": [
+      "immune_response",
+      "inflammation",
+      "signal_transduction"
+    ],
+    "molecular_function": [
+      "structural_protein"
+    ],
+    "pathway_category": [
+      "immune"
+    ],
+    "mechanism_of_action": [
+      "inhibition"
+    ],
+    "disease_association": [
+      "infectious"
+    ],
+    "clinical_relevance": [
+      "diagnostic_marker",
+      "therapeutic_target"
+    ],
+    "phenotype_category": [
+      "infectious_disease"
+    ],
+    "chemical_classification": null,
+    "drug_class": [
+      "antibiotic"
+    ],
+    "regulatory_role": null,
+    "interaction_type": [
+      "pathogenic"
+    ],
+    "inheritance_pattern": [
+      "horizontal_gene_transfer"
+    ],
+    "developmental_stage": [
+      "adult"
+    ],
+    "taxonomic_domain": [
+      "bacteria"
+    ],
+    "expression_context": [
+      "condition_specific"
+    ],
+    "id": "NCBITaxon:47466",
+    "name": "Borrelia miyamotoi",
+    "label": "OrganismTaxon"
+  }
+]

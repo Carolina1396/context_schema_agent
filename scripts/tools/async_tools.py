@@ -7,9 +7,11 @@ but uses AsyncOpenAI with concurrent requests instead of the Batch API.
 
 import asyncio
 import json
+import random
 from pathlib import Path
 
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, RateLimitError, InternalServerError, APIConnectionError, APITimeoutError
+from tqdm.asyncio import tqdm as async_tqdm
 
 from tools.batch_tools import (
     MODEL,
@@ -17,16 +19,93 @@ from tools.batch_tools import (
     _BATCH_INPUTS_DIR,
     _BATCH_OUTPUTS_DIR,
 )
+from tools.cell_context_tools import (
+    build_cell_context_summarize_prompt,
+    build_cell_context_populate_prompt,
+)
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
 
-MAX_CONCURRENT = 20  # semaphore limit for API calls
+MAX_CONCURRENT = 5   # semaphore limit — keep low to stay under TPM limits
+MAX_RETRIES = 8      # max retries on transient errors
+
+# Rate limit errors get a longer base wait to let the TPM window reset
+_RATE_LIMIT_BASE_WAIT = 15.0   # seconds — minimum wait after a 429
+_OTHER_ERROR_BASE_WAIT = 2.0   # seconds — minimum wait for 5xx / connection errors
+
+# Chunked gathering — prevents thundering herd by processing tasks in batches
+# with a mandatory sleep between chunks instead of firing all at once
+CHUNK_SIZE = 20          # requests per chunk
+CHUNK_DELAY_P1 = 8.0    # seconds between Phase 1 chunks (~22k tokens/chunk at 1,100 tok/req)
+CHUNK_DELAY_P2 = 15.0   # seconds between Phase 2 chunks (~36k tokens/chunk at 1,800 tok/req)
 
 # Standard pricing (no batch discount)
 INPUT_COST_PER_M = 0.15
 OUTPUT_COST_PER_M = 0.60
+
+
+# ---------------------------------------------------------------------------
+# Retry helper
+# ---------------------------------------------------------------------------
+
+
+_TRANSIENT_ERRORS = (RateLimitError, InternalServerError, APIConnectionError, APITimeoutError)
+
+
+async def _with_backoff(coro_fn, *args, **kwargs):
+    """Call an async function with exponential backoff on transient API errors.
+
+    RateLimitError uses a longer base wait (_RATE_LIMIT_BASE_WAIT) to allow the
+    TPM window to reset.  Other transient errors use a shorter base wait.
+    """
+    for attempt in range(MAX_RETRIES):
+        try:
+            return await coro_fn(*args, **kwargs)
+        except _TRANSIENT_ERRORS as e:
+            if attempt == MAX_RETRIES - 1:
+                raise
+            base = _RATE_LIMIT_BASE_WAIT if isinstance(e, RateLimitError) else _OTHER_ERROR_BASE_WAIT
+            wait = min(120.0, base * (2 ** attempt) + random.uniform(0, 2))
+            from tqdm import tqdm
+            tqdm.write(f"  [{type(e).__name__}] attempt {attempt + 1}/{MAX_RETRIES}, retrying in {wait:.1f}s...")
+            await asyncio.sleep(wait)
+
+
+# ---------------------------------------------------------------------------
+# Chunked gather helper
+# ---------------------------------------------------------------------------
+
+
+async def _chunked_gather(tasks: list, chunk_delay: float) -> list:
+    """Process async tasks in chunks with a delay between each chunk.
+
+    Prevents thundering-herd rate-limit errors by spreading token consumption
+    across time instead of firing all tasks at once via gather(*all_tasks).
+
+    Uses return_exceptions=True so one bad node (e.g. malformed name causing
+    a 400 BadRequestError) doesn't crash the entire chunk.
+    """
+    from tqdm import tqdm as sync_tqdm
+    results = []
+    n = len(tasks)
+    with sync_tqdm(total=n, unit=" nodes") as pbar:
+        for i in range(0, n, CHUNK_SIZE):
+            chunk = tasks[i : i + CHUNK_SIZE]
+            chunk_results = await asyncio.gather(*chunk, return_exceptions=True)
+            for r in chunk_results:
+                if isinstance(r, Exception):
+                    sync_tqdm.write(f"  [skipped] {type(r).__name__}: {str(r)[:120]}")
+                    results.append(None)
+                else:
+                    results.append(r)
+            pbar.update(len(chunk))
+            if i + CHUNK_SIZE < n:
+                pbar.set_postfix_str(f"waiting {chunk_delay:.0f}s")
+                await asyncio.sleep(chunk_delay)
+                pbar.set_postfix_str("")
+    return [r for r in results if r is not None]
 
 
 # ---------------------------------------------------------------------------
@@ -40,17 +119,24 @@ async def _summarize_one(
     node: dict,
     custom_id: str,
 ) -> dict:
-    """Send a single summarization request. Returns a result dict matching batch output format."""
-    prompt = _SUMMARIZE_PROMPT_TEMPLATE.format(
-        entity_name=node["name"],
-        entity_type=node["label"],
-    )
-    async with sem:
-        response = await client.chat.completions.create(
-            model=MODEL,
-            max_tokens=1000,
-            messages=[{"role": "user", "content": prompt}],
+    """Send a single summarization request with retry. Returns a result dict matching batch output format."""
+    if node.get("cell_type_context"):
+        prompt = build_cell_context_summarize_prompt(node)
+    else:
+        prompt = _SUMMARIZE_PROMPT_TEMPLATE.format(
+            entity_name=node["name"],
+            entity_type=node["label"],
         )
+
+    async def _call():
+        async with sem:
+            return await client.chat.completions.create(
+                model=MODEL,
+                max_tokens=1000,
+                messages=[{"role": "user", "content": prompt}],
+            )
+
+    response = await _with_backoff(_call)
     choice = response.choices[0]
     return {
         "custom_id": custom_id,
@@ -80,8 +166,9 @@ async def async_phase1_summarize(
         cid = f"{i:04d}_{node['id']}"
         tasks.append(_summarize_one(client, sem, node, cid))
 
-    print(f"[async] Phase 1: sending {len(tasks)} summarization requests (concurrency={MAX_CONCURRENT})...")
-    results = await asyncio.gather(*tasks)
+    print(f"[async] Phase 1: sending {len(tasks)} summarization requests "
+          f"(concurrency={MAX_CONCURRENT}, chunk_size={CHUNK_SIZE}, delay={CHUNK_DELAY_P1}s)...")
+    results = await _chunked_gather(tasks, CHUNK_DELAY_P1)
 
     # Parse into summaries dict (same as parse_phase1_results)
     summaries: dict[str, str] = {}
@@ -145,15 +232,22 @@ async def _populate_one(
     schema: dict,
     custom_id: str,
 ) -> dict:
-    """Send a single population request. Returns a result dict matching batch output format."""
-    prompt = _build_populate_prompt(node, summary_text, schema)
-    async with sem:
-        response = await client.chat.completions.create(
-            model=MODEL,
-            max_tokens=2000,
-            response_format={"type": "json_object"},
-            messages=[{"role": "user", "content": prompt}],
-        )
+    """Send a single population request with retry. Returns a result dict matching batch output format."""
+    if node.get("cell_type_context"):
+        prompt = build_cell_context_populate_prompt(node, summary_text, schema)
+    else:
+        prompt = _build_populate_prompt(node, summary_text, schema)
+
+    async def _call():
+        async with sem:
+            return await client.chat.completions.create(
+                model=MODEL,
+                max_tokens=2000,
+                response_format={"type": "json_object"},
+                messages=[{"role": "user", "content": prompt}],
+            )
+
+    response = await _with_backoff(_call)
     choice = response.choices[0]
     return {
         "custom_id": custom_id,
@@ -190,8 +284,9 @@ async def async_phase2_populate(
             continue
         tasks.append(_populate_one(client, sem, node, summary_text, schema, cid))
 
-    print(f"[async] Phase 2: sending {len(tasks)} population requests (concurrency={MAX_CONCURRENT})...")
-    results = await asyncio.gather(*tasks)
+    print(f"[async] Phase 2: sending {len(tasks)} population requests "
+          f"(concurrency={MAX_CONCURRENT}, chunk_size={CHUNK_SIZE}, delay={CHUNK_DELAY_P2}s)...")
+    results = await _chunked_gather(tasks, CHUNK_DELAY_P2)
 
     populated, suggestions = parse_phase2_results(list(results))
 
@@ -200,9 +295,14 @@ async def async_phase2_populate(
     for p in populated:
         cid = p.pop("_custom_id", "")
         if cid in node_by_cid:
-            p["id"] = node_by_cid[cid]["id"]
-            p["name"] = node_by_cid[cid]["name"]
-            p["label"] = node_by_cid[cid]["label"]
+            src = node_by_cid[cid]
+            p["id"] = src["id"]
+            p["name"] = src["name"]
+            p["label"] = src["label"]
+            # Preserve composite-node metadata (cell_type_context, base_id)
+            for meta_field in ("cell_type_context", "base_id"):
+                if meta_field in src:
+                    p[meta_field] = src[meta_field]
 
     print(f"[async] Phase 2 complete: {len(populated)} nodes populated.")
     return list(results), populated, suggestions

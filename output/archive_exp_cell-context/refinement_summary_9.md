@@ -1,0 +1,57 @@
+# Refinement Summary
+
+## cell_function_engaged — coverage: 52% | applicable coverage: 81%
+- Terms added: cell_signaling, neuroprotection, metabolic_regulation, cognitive_function, tissue_repair.
+- Count of terms added: 5
+- Terms removed: muscle_growth, wound_healing, neurite_outgrowth, anti-apoptotic_activity, immune_surveillance, inflammation_regulation.
+- Count of terms removed: 6
+
+## cell_metabolic_context — coverage: 63% | applicable coverage: 97%
+- Terms added: neuron_specific_metabolism.
+- Count of terms added: 1
+- Terms removed: antioxidant_activity, lipid_metabolism, immune_cell_metabolism.
+- Count of terms removed: 3
+
+## cell_stress_response — coverage: 47% | applicable coverage: 92%
+- Terms added: oxidative_stress, cell_resilience.
+- Count of terms added: 2
+- Terms removed: apoptosis_due_to_energy_balance, protection_against_liver_injury.
+- Count of terms removed: 2
+
+## receptor_class_in_cell — coverage: 47% | applicable coverage: 94%
+- Terms added: growth_factor.
+- Count of terms added: 1
+- Terms removed: muscle_cell_receptors, toll_like, integrins.
+- Count of terms removed: 3
+
+## drug_cell_interaction_mode — coverage: 93% | applicable coverage: 100%
+- Terms added: none.
+- Count of terms added: 0
+- Terms removed: immunomodulation, indirect_modulation.
+- Count of terms removed: 2
+
+## Fields without changes
+
+- **cell_metabolic_context** — coverage: n/a
+  - Terms added: none
+  - Count of terms added: 0
+  - Terms removed: none
+  - Count of terms removed: 0
+
+- **cell_stress_response** — coverage: n/a
+  - Terms added: none
+  - Count of terms added: 0
+  - Terms removed: none
+  - Count of terms removed: 0
+  
+- **receptor_class_in_cell** — coverage: n/a
+  - Terms added: none
+  - Count of terms added: 0
+  - Terms removed: none
+  - Count of terms removed: 0
+  
+- **drug_cell_interaction_mode** — coverage: n/a
+  - Terms added: none
+  - Count of terms added: 0
+  - Terms removed: none
+  - Count of terms removed: 0

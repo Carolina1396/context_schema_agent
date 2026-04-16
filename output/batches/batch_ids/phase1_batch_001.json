@@ -1,0 +1,9 @@
+{
+  "batch_id": "batch_69dbf507830c8190b1a3df3aef6bc92f",
+  "input_file_id": "file-JMj2TpkFDnUg6gV9FoX3hX",
+  "phase": "phase1",
+  "batch_number": 1,
+  "submitted_at": "2026-04-12T19:39:51.647003+00:00",
+  "status": "validating",
+  "jsonl_input": "/home/agonzalez/context_schema_agent/output/batches/inputs/phase1_batch_001.jsonl"
+}

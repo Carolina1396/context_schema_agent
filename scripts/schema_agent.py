@@ -25,7 +25,11 @@ import json
 import asyncio
 import random
 import subprocess
+import time
 from pathlib import Path
+
+from tqdm import tqdm
+from openai import RateLimitError
 
 from openai import OpenAI, AsyncOpenAI
 
@@ -61,16 +65,23 @@ from tools.schema_tools import (
     write_nodes,
     load_latest_schema,
     set_run_number,
+    set_archive_dir,
     cleanup_checkpoints,
     is_null_like,
+    load_rejected_suggestions,
+    save_rejected_suggestions,
+    update_rejected_suggestions,
+    filter_suggestions,
+    load_vocabulary_history,
 )
+from tools.cell_context_tools import expand_drug_nodes, DRUG_CELL_TYPES
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
 
 MAX_TURNS = 40
-NUM_NODES = 100
+NUM_NODES = 100  # overridden at runtime by --num-nodes
 
 # Standard pricing for Phase 3 agent loop (non-batch)
 INPUT_COST_PER_M = 0.15
@@ -125,7 +136,16 @@ class CostTracker:
             self.batch_output_tokens += usage.get("completion_tokens", 0)
 
     def check(self) -> bool:
-        return self.cost < self.budget
+        """Check whether Phase 3 agent spending is still within budget.
+
+        Only counts agent (Phase 3) tokens — batch costs from Phase 1 & 2
+        are fixed and already spent, so they should not block Phase 3 from running.
+        """
+        agent_cost = (
+            self.total_input_tokens * INPUT_COST_PER_M / 1_000_000
+            + self.total_output_tokens * OUTPUT_COST_PER_M / 1_000_000
+        )
+        return agent_cost < self.budget
 
     def summary(self) -> str:
         return (
@@ -151,56 +171,63 @@ def estimate_per_iteration_cost(mode: str = "batch") -> float:
 # ---------------------------------------------------------------------------
 
 
-def select_diverse_nodes() -> list[dict]:
-    """Pick 100 diverse nodes across all entity types, mixing degree levels."""
+def select_diverse_nodes(node_type: str | None = None) -> list[dict]:
+    """Pick 100 diverse nodes, mixing high-degree and low-degree.
+
+    If node_type is given, sample only from that entity type.
+    Otherwise sample across all 9 entity types.
+    """
     _ensure_loaded()
-    entity_types = [
-        "Disease",
-        "MacromolecularMachine",
-        "ChemicalSubstance",
-        "BiologicalProcessOrActivity",
-        "OrganismTaxon",
-        "GeneFamily",
-        "PhenotypicFeature",
-        "Pathway",
-        "AnatomicalEntity",
-    ]
 
     def _degree(n: dict) -> int:
         xrefs = n.get("xrefs", "")
         return len(xrefs.split("|")) if xrefs else 0
 
-    selected = []
-    per_type = max(NUM_NODES // len(entity_types), 1)  # ~11 per type
+    if node_type:
+        # Single-type mode: mix high / low / random within that type
+        pool = [n for n in _nodes_by_type.get(node_type, []) if len(n.get("name", "")) > 3]
+        if not pool:
+            raise ValueError(f"No nodes found for type '{node_type}'")
+        n_high = NUM_NODES // 3
+        n_low = NUM_NODES // 3
+        n_rand = NUM_NODES - n_high - n_low
+        high = sorted(pool, key=_degree, reverse=True)[:n_high]
+        low = sorted(pool, key=_degree)[:n_low]
+        used_ids = {n["id"] for n in high + low}
+        remaining = [n for n in pool if n["id"] not in used_ids]
+        rand = random.sample(remaining, min(n_rand, len(remaining)))
+        selected = high + low + rand
+    else:
+        entity_types = [
+            "Disease", "MacromolecularMachine", "ChemicalSubstance",
+            "BiologicalProcessOrActivity", "OrganismTaxon", "GeneFamily",
+            "PhenotypicFeature", "Pathway", "AnatomicalEntity",
+        ]
+        selected = []
+        per_type = max(NUM_NODES // len(entity_types), 1)
+        for etype in entity_types:
+            candidates = [n for n in _nodes_by_type.get(etype, []) if len(n.get("name", "")) > 3]
+            if not candidates:
+                continue
+            high = sorted(candidates, key=_degree, reverse=True)[:max(per_type // 3, 1)]
+            low = sorted(candidates, key=_degree)[:max(per_type // 3, 1)]
+            used = {n["id"] for n in high + low}
+            remaining = [n for n in candidates if n["id"] not in used]
+            rand = random.sample(remaining, min(per_type - len(high) - len(low), len(remaining)))
+            selected.extend(high + low + rand)
 
-    for etype in entity_types:
-        pool = _nodes_by_type.get(etype, [])
-        candidates = [n for n in pool if len(n.get("name", "")) > 3]
-        if not candidates:
-            continue
+        # Deduplicate
+        seen: set[str] = set()
+        deduped = []
+        for n in selected:
+            if n["id"] not in seen:
+                seen.add(n["id"])
+                deduped.append(n)
+        selected = deduped
 
-        high = sorted(candidates, key=_degree, reverse=True)[:max(per_type // 3, 1)]
-        low = sorted(candidates, key=_degree)[:max(per_type // 3, 1)]
-        remaining_pool = [n for n in candidates if n not in high and n not in low]
-        rand_count = per_type - len(high) - len(low)
-        rand_sample = random.sample(remaining_pool, min(rand_count, len(remaining_pool)))
-        selected.extend(high + low + rand_sample)
-
-    # Deduplicate by node ID
-    seen_ids = set()
-    deduped = []
-    for n in selected:
-        if n["id"] not in seen_ids:
-            seen_ids.add(n["id"])
-            deduped.append(n)
-    selected = deduped
-
-    if len(selected) > NUM_NODES:
-        selected = random.sample(selected, NUM_NODES)
-    elif len(selected) < NUM_NODES:
-        all_candidates = [n for n in _nodes if len(n.get("name", "")) > 3 and n["id"] not in seen_ids]
-        extra = random.sample(all_candidates, min(NUM_NODES - len(selected), len(all_candidates)))
-        selected.extend(extra)
+        if len(selected) < NUM_NODES:
+            extras = [n for n in _nodes if len(n.get("name", "")) > 3 and n["id"] not in seen]
+            selected.extend(random.sample(extras, min(NUM_NODES - len(selected), len(extras))))
 
     return selected[:NUM_NODES]
 
@@ -212,10 +239,26 @@ def select_diverse_nodes() -> list[dict]:
 
 def phase1_summarize(nodes: list[dict], client: OpenAI) -> tuple[list[dict], dict[str, str]]:
     """Submit a summarization batch and return (raw_results, summaries_by_id)."""
+    from tools.cell_context_tools import build_cell_context_summarize_prompt
     print("Building Phase 1 JSONL...")
     requests = []
     for i, node in enumerate(nodes):
-        req = build_summarize_request(node, custom_id=f"{i:04d}_{node['id']}")
+        cid = f"{i:04d}_{node['id']}"
+        if node.get("cell_type_context"):
+            # Cell-type-conditional prompt — override the generic one
+            prompt = build_cell_context_summarize_prompt(node)
+            req = {
+                "custom_id": cid,
+                "method": "POST",
+                "url": "/v1/chat/completions",
+                "body": {
+                    "model": MODEL,
+                    "max_tokens": 1000,
+                    "messages": [{"role": "user", "content": prompt}],
+                },
+            }
+        else:
+            req = build_summarize_request(node, custom_id=cid)
         requests.append(req)
 
     jsonl_path = _BATCH_INPUTS_DIR / "phase1_batch_001.jsonl"
@@ -249,6 +292,7 @@ def phase2_populate(
     client: OpenAI,
 ) -> tuple[list[dict], list[dict], dict[str, list[str]]]:
     """Submit a population batch and return (raw_results, populated_nodes, suggestions)."""
+    from tools.cell_context_tools import build_cell_context_populate_prompt
     print("Building Phase 2 JSONL...")
     requests = []
     for i, node in enumerate(nodes):
@@ -256,7 +300,21 @@ def phase2_populate(
         summary_text = summaries.get(cid, "")
         if not summary_text:
             continue
-        req = build_populate_request(node, summary_text, schema, custom_id=cid)
+        if node.get("cell_type_context"):
+            prompt = build_cell_context_populate_prompt(node, summary_text, schema)
+            req = {
+                "custom_id": cid,
+                "method": "POST",
+                "url": "/v1/chat/completions",
+                "body": {
+                    "model": MODEL,
+                    "max_tokens": 2000,
+                    "response_format": {"type": "json_object"},
+                    "messages": [{"role": "user", "content": prompt}],
+                },
+            }
+        else:
+            req = build_populate_request(node, summary_text, schema, custom_id=cid)
         requests.append(req)
 
     jsonl_path = _BATCH_INPUTS_DIR / "phase2_batch_001.jsonl"
@@ -278,9 +336,14 @@ def phase2_populate(
     for p in populated:
         cid = p.pop("_custom_id", "")
         if cid in node_by_cid:
-            p["id"] = node_by_cid[cid]["id"]
-            p["name"] = node_by_cid[cid]["name"]
-            p["label"] = node_by_cid[cid]["label"]
+            src = node_by_cid[cid]
+            p["id"] = src["id"]
+            p["name"] = src["name"]
+            p["label"] = src["label"]
+            # Preserve composite-node metadata (cell_type_context, base_id)
+            for meta_field in ("cell_type_context", "base_id"):
+                if meta_field in src:
+                    p[meta_field] = src[meta_field]
 
     print(f"Phase 2 complete: {len(populated)} nodes populated.")
     return raw_results, populated, suggestions
@@ -389,45 +452,43 @@ TOOLS = [
     {
         "type": "function",
         "function": {
-            "name": "save_schema",
+            "name": "update_vocabulary",
             "description": (
-                "Save a schema draft as a versioned checkpoint to disk. "
-                "You MUST pass the full schema object as the 'schema' argument."
+                "Replace the term list for ONE controlled vocabulary field. "
+                "Call this once per field you want to change. "
+                "Max 20 terms per vocabulary."
             ),
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "schema": {
-                        "type": "object",
-                        "description": "The complete schema object to save.",
-                    },
-                    "version": {
+                    "field_name": {
                         "type": "string",
-                        "description": "Version label (e.g. '2.0', '2.1').",
+                        "description": "The vocabulary key to update (e.g. 'tissue_location').",
+                    },
+                    "terms": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "The complete new term list for this vocabulary (max 20 terms).",
                     },
                 },
-                "required": ["schema", "version"],
+                "required": ["field_name", "terms"],
             },
         },
     },
     {
         "type": "function",
         "function": {
-            "name": "finalize_schema",
-            "description": (
-                "Save the final refined schema as schema_final_N.json in the archive. "
-                "Call this AFTER you have written the summary. "
-                "You MUST pass the full schema object as the 'schema' argument."
-            ),
+            "name": "save_checkpoint",
+            "description": "Save the current schema state as a versioned checkpoint.",
             "parameters": {
                 "type": "object",
                 "properties": {
-                    "schema": {
-                        "type": "object",
-                        "description": "The complete final schema object.",
+                    "version": {
+                        "type": "string",
+                        "description": "Version label (e.g. '2.0', '2.1').",
                     },
                 },
-                "required": ["schema"],
+                "required": ["version"],
             },
         },
     },
@@ -451,46 +512,80 @@ TOOLS = [
             },
         },
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "finalize_schema",
+            "description": (
+                "Save the final schema as schema_final_N.json and end the session. "
+                "Call this AFTER write_summary."
+            ),
+            "parameters": {"type": "object", "properties": {}, "required": []},
+        },
+    },
 ]
 
 
-def dispatch_tool(name: str, input_args: dict) -> str:
-    """Call the appropriate tool function and return its JSON result."""
-    try:
-        if name == "save_schema":
-            schema = input_args.get("schema")
-            version = input_args.get("version", "unknown")
-            if not schema:
-                result = {"error": "Missing required 'schema' argument."}
-            else:
-                result = save_schema(schema=schema, version=version)
-        elif name == "finalize_schema":
-            schema = input_args.get("schema")
-            if not schema:
-                result = {"error": "Missing required 'schema' argument."}
-            else:
-                result = finalize_schema(schema=schema)
-        elif name == "write_summary":
-            content = input_args.get("content", "")
-            if not content:
-                result = {"error": "Missing required 'content' argument."}
-            else:
-                result = write_summary(content=content)
-        else:
-            result = {"error": f"Unknown tool: {name}"}
-    except Exception as e:
-        result = {"error": f"Tool '{name}' raised: {type(e).__name__}: {e}"}
+def make_dispatch_tool(base_schema: dict):
+    """Return a dispatch_tool closure that applies incremental vocabulary updates."""
+    import copy
+    current_schema = copy.deepcopy(base_schema)
 
-    return json.dumps(result, ensure_ascii=False)
+    def dispatch_tool(name: str, input_args: dict) -> str:
+        try:
+            if name == "update_vocabulary":
+                field_name = input_args.get("field_name", "")
+                terms = input_args.get("terms")
+                if not field_name or terms is None:
+                    result = {"error": "Missing 'field_name' or 'terms'."}
+                elif field_name not in current_schema.get("controlled_vocabularies", {}):
+                    result = {"error": f"Unknown vocabulary: '{field_name}'."}
+                else:
+                    current_schema["controlled_vocabularies"][field_name] = terms
+                    result = {"updated": field_name, "term_count": len(terms)}
+            elif name == "save_checkpoint":
+                version = input_args.get("version", "unknown")
+                result = save_schema(schema=current_schema, version=version)
+            elif name == "finalize_schema":
+                result = finalize_schema(schema=current_schema)
+            elif name == "write_summary":
+                content = input_args.get("content", "")
+                if not content:
+                    result = {"error": "Missing required 'content' argument."}
+                else:
+                    result = write_summary(content=content)
+            else:
+                result = {"error": f"Unknown tool: {name}"}
+        except Exception as e:
+            result = {"error": f"Tool '{name}' raised: {type(e).__name__}: {e}"}
+
+        return json.dumps(result, ensure_ascii=False)
+
+    return dispatch_tool
 
 
 def build_refinement_prompt(
     type_summary: str,
     starting_schema: dict,
     analysis: str,
+    vocab_history: str = "",
 ) -> str:
     """Build the system prompt for Phase 3 (schema refinement)."""
     schema_json = json.dumps(starting_schema, indent=2)
+
+    # Build optional history section (Idea D)
+    history_section = ""
+    if vocab_history:
+        history_section = f"""
+{vocab_history}
+
+IMPORTANT: Review the history above before making changes. If a term was
+added in one iteration and removed in the next (or vice-versa), this is
+oscillation — do NOT repeat the cycle. Only make a change if you have a
+clear reason that differs from the previous rationale. Fields that have been
+stable (no changes) across recent iterations should generally stay unchanged
+unless the population data strongly justifies a modification.
+"""
 
     return f"""You are a schema refinement agent for a biomedical knowledge graph.
 
@@ -520,7 +615,7 @@ or required flags. You may ONLY modify the term lists inside
 
 ## Population analysis (from 100 nodes)
 {analysis}
-
+{history_section}
 ## Your tasks
 1. Review the coverage stats, term frequencies, and suggested additions above.
 2. REFINE the controlled vocabularies ONLY:
@@ -539,8 +634,12 @@ or required flags. You may ONLY modify the term lists inside
      "unclassified", "other", "not_a_drug", "not_organism_specific"). These
      will be automatically stripped on save. If no vocabulary term fits a node,
      the field value should be null — not a vocabulary term representing absence.
-3. Save at least 2 versioned checkpoints (save_schema) with the FULL schema.
-4. Write a refinement summary (write_summary) with the following structure for
+3. For each vocabulary you want to change, call update_vocabulary(field_name, terms)
+   with the COMPLETE new term list for that field. Call it once per field.
+   Fields you do not call update_vocabulary for remain unchanged.
+4. Call save_checkpoint at least twice during your work (e.g. after the first
+   batch of updates and again before finalizing).
+5. Write a refinement summary (write_summary) with the following structure for
    EACH controlled-vocabulary field, ranked by coverage percentage (highest first):
      - **field_name** — coverage: XX% | applicable coverage: YY%
        - Terms added: term1, term2, ...
@@ -553,12 +652,7 @@ or required flags. You may ONLY modify the term lists inside
    Include ALL 21 fields in the summary, even if no changes were made (show
    "Terms added: none" / "Terms removed: none" in that case). Do not include
    anything else in the summary — no overview, no examples, no commentary.
-5. Finalize the schema (finalize_schema) with the FULL schema object.
-
-IMPORTANT: When calling save_schema or finalize_schema, you MUST include the
-complete schema JSON as the "schema" argument. Do not omit it. The schema must
-retain all original fields unchanged — only `controlled_vocabularies` values
-should differ from the input.
+6. Call finalize_schema to save the final schema and end the session.
 
 ## Rules
 - Be opinionated about vocabularies: remove unused terms, merge redundant ones
@@ -575,9 +669,11 @@ def phase3_refine(
     analysis: str,
     client: OpenAI,
     tracker: CostTracker,
+    vocab_history: str = "",
 ) -> None:
     """Run the synchronous agent loop for schema refinement."""
-    system = build_refinement_prompt(type_summary, starting_schema, analysis)
+    system = build_refinement_prompt(type_summary, starting_schema, analysis, vocab_history)
+    dispatch_tool = make_dispatch_tool(starting_schema)
 
     messages: list[dict] = [
         {"role": "system", "content": system},
@@ -603,12 +699,21 @@ def phase3_refine(
         print(f"Phase 3 — Turn {turn}/{MAX_TURNS}  |  {tracker.summary()}")
         print(f"{'='*60}")
 
-        response = client.chat.completions.create(
-            model=MODEL,
-            max_tokens=16384,
-            tools=TOOLS,
-            messages=messages,
-        )
+        for attempt in range(6):
+            try:
+                response = client.chat.completions.create(
+                    model=MODEL,
+                    max_tokens=16384,
+                    tools=TOOLS,
+                    messages=messages,
+                )
+                break
+            except RateLimitError:
+                if attempt == 5:
+                    raise
+                wait = min(60.0, (2 ** attempt) + random.uniform(0, 1))
+                print(f"  [rate limit] retrying in {wait:.1f}s...")
+                time.sleep(wait)
         tracker.record(response.usage)
 
         choice = response.choices[0]
@@ -645,7 +750,7 @@ def phase3_refine(
 
             if func_name == "finalize_schema":
                 result_data = json.loads(result_str)
-                if result_data.get("finalized"):
+                if result_data.get("finalized") or result_data.get("run_number"):
                     finalized = True
 
         if finalized:
@@ -678,7 +783,12 @@ def phase3_refine(
 # ---------------------------------------------------------------------------
 
 
-def run_pipeline(budget: float, mode: str = "batch") -> None:
+def run_pipeline(
+    budget: float,
+    mode: str = "batch",
+    node_type: str | None = None,
+    cell_context: bool = False,
+) -> None:
     """Run the full 3-phase pipeline.
 
     Parameters
@@ -688,6 +798,11 @@ def run_pipeline(budget: float, mode: str = "batch") -> None:
     mode : str
         "batch" for OpenAI Batch API (cheap, slow) or
         "async" for direct async API calls (full price, fast).
+    node_type : str or None
+        If set, restrict node sampling to this entity type only.
+    cell_context : bool
+        If True, expand ChemicalSubstance nodes into (drug, cell_type)
+        composite nodes before Phase 1. Forces node_type=ChemicalSubstance.
     """
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
@@ -720,14 +835,24 @@ def run_pipeline(budget: float, mode: str = "batch") -> None:
         f"Entity types ({type_dist['num_types']}):\n{type_lines}"
     )
 
-    # Select 100 diverse nodes
-    diverse_nodes = select_diverse_nodes()
-    print(f"\nSelected {len(diverse_nodes)} diverse nodes:")
-    type_counts = {}
+    # Select 100 diverse nodes (optionally filtered to one entity type)
+    effective_type = "ChemicalSubstance" if cell_context else node_type
+    diverse_nodes = select_diverse_nodes(node_type=effective_type)
+    label = effective_type if effective_type else "all types"
+    print(f"\nSelected {len(diverse_nodes)} nodes ({label}):")
+    type_counts: dict[str, int] = {}
     for n in diverse_nodes:
         type_counts[n["label"]] = type_counts.get(n["label"], 0) + 1
     for t, c in sorted(type_counts.items()):
         print(f"  {t}: {c}")
+
+    # Expand drug nodes into (drug, cell_type) composite nodes
+    if cell_context:
+        diverse_nodes = expand_drug_nodes(diverse_nodes)
+        print(f"\nCell context expansion: {len(diverse_nodes)} composite nodes "
+              f"({NUM_NODES} drugs × {len(DRUG_CELL_TYPES)} cell types)")
+        for ct in DRUG_CELL_TYPES:
+            print(f"  ::{ct}")
     print()
 
     if mode == "async":
@@ -765,19 +890,35 @@ def run_pipeline(budget: float, mode: str = "batch") -> None:
     print(f"\nWriting {len(populated_nodes)} populated nodes to output/archive/nodes_{next_run}.json...")
     write_nodes(populated_nodes)
 
+    # ---- Idea B: Filter suggestions against previously-rejected terms ----
+    rejected = load_rejected_suggestions()
+    original_suggestion_count = sum(len(v) for v in suggestions.values())
+    suggestions = filter_suggestions(suggestions, rejected)
+    filtered_count = sum(len(v) for v in suggestions.values())
+    print(f"Suggestions: {original_suggestion_count} raw → {filtered_count} after filtering")
+
     # ---- Phase 2 analysis ----
     analysis = analyze_population_results(populated_nodes, starting_schema, suggestions, responded)
     print("\n" + analysis)
 
-    if not tracker.check():
-        print("Budget exhausted after Phase 2.")
-        return
+    # ---- Idea D: Load vocabulary change history for Phase 3 context ----
+    vocab_history = load_vocabulary_history(last_n=3)
+    if vocab_history:
+        print(f"\nLoaded vocabulary change history (last 3 iterations)")
 
     # ---- Phase 3: Agent refinement (synchronous) ----
+    # Note: budget check is NOT applied here — Phase 1+2 batch costs are fixed
+    # and Phase 3 costs ~$0.01. The budget gate inside the agent loop handles
+    # runaway spending within Phase 3 itself.
     print("\n" + "=" * 60)
     print("PHASE 3: Agent-driven schema refinement")
     print("=" * 60)
-    phase3_refine(starting_schema, type_summary, analysis, client, tracker)
+    phase3_refine(starting_schema, type_summary, analysis, client, tracker, vocab_history)
+
+    # ---- Idea B: Persist rejected suggestions after Phase 3 ----
+    final_schema, _ = load_latest_schema()
+    rejected = update_rejected_suggestions(suggestions, final_schema, rejected)
+    save_rejected_suggestions(rejected)
 
     # ---- Cleanup checkpoint intermediates ----
     cleanup_result = cleanup_checkpoints()
@@ -852,9 +993,87 @@ def main():
         default=10,
         help="Number of refinement iterations to run (default 10)",
     )
+    parser.add_argument(
+        "--node-type",
+        type=str,
+        default=None,
+        help=(
+            "Restrict node sampling to one entity type "
+            "(e.g. Disease, ChemicalSubstance). "
+            "Outputs go to output/archive_<node_type>/"
+        ),
+    )
+    parser.add_argument(
+        "--num-nodes",
+        type=int,
+        default=None,
+        help=(
+            "Number of base nodes to sample per iteration (default 100). "
+            "With --cell-context, total composite nodes = num_nodes × cell_types. "
+            "Use 9 for Tier 1 async cell-context runs (9 × 11 = 99 nodes)."
+        ),
+    )
+    parser.add_argument(
+        "--cell-context",
+        action="store_true",
+        default=False,
+        help=(
+            "Expand ChemicalSubstance nodes into (drug, cell_type) composite nodes. "
+            "Each drug is annotated separately per cell type for context-specific "
+            "drug-disease repositioning. Implies --node-type ChemicalSubstance. "
+            "Outputs go to output/archive_<exp-name>/"
+        ),
+    )
+    parser.add_argument(
+        "--exp-name",
+        type=str,
+        default="cell_context",
+        help=(
+            "Name for the cell-context experiment archive (default: cell_context). "
+            "Use a different name (e.g. expB) to run a new experiment without "
+            "overwriting existing results. Archive: output/archive_<exp-name>/"
+        ),
+    )
     args = parser.parse_args()
     mode = args.mode
     iterations = args.iterations
+    node_type = args.node_type
+    cell_context = args.cell_context
+
+    if args.num_nodes is not None:
+        global NUM_NODES
+        NUM_NODES = args.num_nodes
+
+    # Configure archive directory for this run
+    exp_name = args.exp_name if cell_context else None
+    if cell_context:
+        archive_dir_name = f"archive_{exp_name}"
+        archive_path = Path(__file__).resolve().parent.parent / "output" / archive_dir_name
+        archive_path.mkdir(parents=True, exist_ok=True)
+        set_archive_dir(archive_path)
+        print(f"Cell context mode  →  experiment: {exp_name}  →  archive: output/{archive_dir_name}/")
+        # Seed archive with a starting schema if none exists yet.
+        # If the experiment dir already has schema_final_0.json (e.g. expB), keep it.
+        # Otherwise copy the latest schema from the main disease archive.
+        if not list(archive_path.glob("schema_final_*.json")):
+            import shutil
+            main_archive = Path(__file__).resolve().parent.parent / "output" / "archive"
+            main_schemas = sorted(
+                main_archive.glob("schema_final_*.json"),
+                key=lambda p: int(p.stem.rsplit("_", 1)[-1]),
+            )
+            if main_schemas:
+                seed_src = main_schemas[-1]
+                seed_dst = archive_path / "schema_final_0.json"
+                shutil.copy(seed_src, seed_dst)
+                print(f"Seeded {archive_dir_name}/ with {seed_src.name} → schema_final_0.json")
+            else:
+                print(f"WARNING: No schema found to seed {archive_dir_name}/ from.")
+    elif node_type:
+        archive_subdir = f"archive_{node_type.lower()}"
+        archive_path = Path(__file__).resolve().parent.parent / "output" / archive_subdir
+        set_archive_dir(archive_path)
+        print(f"Node type filter: {node_type}  →  archive: output/{archive_subdir}/")
 
     est_per = estimate_per_iteration_cost(mode)
     est_total = round(est_per * iterations, 2)
@@ -864,6 +1083,11 @@ def main():
     mode_label = "Batch API (50% off)" if mode == "batch" else "Async direct API (standard pricing)"
     print(f"\nMode: {mode_label}")
     print(f"Iterations: {iterations}")
+    if cell_context:
+        print(f"Cell context mode: {NUM_NODES} drugs × {len(DRUG_CELL_TYPES)} cell types = "
+              f"{NUM_NODES * len(DRUG_CELL_TYPES)} composite nodes per iteration")
+    elif node_type:
+        print(f"Node type: {node_type}")
     print(f"Estimated cost per iteration ({NUM_NODES} nodes): ${est_per:.2f}")
     print(f"Estimated total cost ({iterations} iterations): ${est_total:.2f}")
     print(f"  Phase 1 (summarize): {NUM_NODES} requests per iteration")
@@ -886,11 +1110,11 @@ def main():
     print(f"Max total spend: ${budget * iterations:.2f}")
     print(f"Starting {iterations} iterations...\n")
 
-    for i in range(1, iterations + 1):
+    for i in tqdm(range(1, iterations + 1), desc="Iterations", unit=" iter"):
         print("\n" + "#" * 60)
         print(f"# ITERATION {i} / {iterations}")
         print("#" * 60 + "\n")
-        run_pipeline(budget, mode=mode)
+        run_pipeline(budget, mode=mode, node_type=node_type, cell_context=cell_context)
 
     # Generate plots after all iterations
     print("\n" + "#" * 60)

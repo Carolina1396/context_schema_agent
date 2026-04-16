@@ -8,6 +8,7 @@ X-axis = iteration (N), grouped by added/removed.
 Y-axis = total count of vocabulary terms changed.
 """
 
+import argparse
 import re
 from pathlib import Path
 
@@ -72,9 +73,27 @@ def _load_summaries() -> list[tuple[int, dict[str, int]]]:
 
 
 def main():
+    global _ARCHIVE_DIR, _IMAGES_DIR
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--archive-dir", dest="archive_dir", default=None,
+                        help="Archive directory to read summaries from (default: output/archive/)")
+    parser.add_argument("--output-dir", dest="output_dir", default=None,
+                        help="Directory to save the plot (default: images/)")
+    args = parser.parse_args()
+
+    if args.archive_dir:
+        _ARCHIVE_DIR = Path(args.archive_dir)
+        if not _ARCHIVE_DIR.is_absolute():
+            _ARCHIVE_DIR = _ROOT / _ARCHIVE_DIR
+    if args.output_dir:
+        _IMAGES_DIR = Path(args.output_dir)
+        if not _IMAGES_DIR.is_absolute():
+            _IMAGES_DIR = _ROOT / _IMAGES_DIR
+        _IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+
     summaries = _load_summaries()
     if not summaries:
-        print("No refinement_summary_N.md files found in output/archive/.")
+        print(f"No refinement_summary_N.md files found in {_ARCHIVE_DIR}.")
         return
 
     run_numbers = [r for r, _ in summaries]
